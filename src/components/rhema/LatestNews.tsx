@@ -7,7 +7,7 @@ const newsItems = [
         date: "15 Jan 2022",
         author: "Candice Wu",
         description: "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
-        image: "/assets/news1.png", // Replace with actual image path
+        image: "/assets/news1.png",
     },
     {
         id: 2,

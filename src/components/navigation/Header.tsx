@@ -16,8 +16,8 @@ interface HeaderProps {
 
 const defaultValues = {
     bg: '#C3973A',
-    buttonColor: '#62B84E',
-    dividerColor: '#00793F',
+    buttonColor: '#fff',
+    dividerColor: '#fff',
 };
 
 const Header = ({ colors = defaultValues }: HeaderProps) => {
@@ -42,8 +42,8 @@ const Header = ({ colors = defaultValues }: HeaderProps) => {
                         />
                     </Link>
                     <div className="flex justify-center items-center lg:order-2">
-                        <Link href={"/"} className="pr-[50px]">
-                            <button className="hidden lg:block bg-white py-2.5 px-6 text-black font-semibold text-md rounded-full hover:bg-opacity-90 transition">
+                        <Link href={"/partner"} className="pr-[50px]">
+                            <button className="hidden lg:block bg-white py-2.5 px-6 text-black font-semibold text-md rounded-full hover:bg-opacity-90 transition cursor-pointer">
                                 Partner With us
                             </button>
                         </Link>
@@ -104,8 +104,8 @@ const Header = ({ colors = defaultValues }: HeaderProps) => {
                             )}
                             <li>
                                 <Link
-                                    href={'/'}
-                                    className="hidden lg:block py-2 pl-3 pr-4 text-sm font-semibold text-white rounded lg:bg-transparent lg:p-0 mb-3 lg:mb-0 xl:hidden"
+                                    href={'/partner'}
+                                    className="hidden lg:block py-2 pl-3 pr-4 text-sm font-semibold text-white rounded lg:bg-transparent lg:p-0 mb-3 lg:mb-0 xl:hidden cursor-pointer"
                                     aria-current="page"
                                     target="blank"
                                 >
@@ -114,8 +114,8 @@ const Header = ({ colors = defaultValues }: HeaderProps) => {
                             </li>
                             <li>
                                 <Link
-                                    href={''}
-                                    className="block lg:hidden py-2 pl-3 pr-4 text-sm font-semibold text-gray-700 bg-white rounded lg:bg-transparent lg:p-0 mb-3 lg:mb-0"
+                                    href={'/partner'}
+                                    className="block lg:hidden py-2 pl-3 pr-4 text-sm font-semibold text-gray-700 bg-white rounded lg:bg-transparent lg:p-0 mb-3 lg:mb-0 cursor-pointer"
                                     aria-current="page"
                                     target="blank"
                                 >

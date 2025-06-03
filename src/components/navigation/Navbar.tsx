@@ -16,8 +16,8 @@ interface HeaderProps {
 
 const defaultValues = {
     bg: 'transparent',
-    buttonColor: '#62B84E',
-    dividerColor: '#00793F',
+    buttonColor: '#fff',
+    dividerColor: '#fff',
 };
 
 
@@ -29,7 +29,7 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
         <>
             <Nav
                 $collapsed={collapsed}
-                className="transition ease-in-out delay-150 fixed w-full text-white"
+                className="transition ease-in-out delay-150 w-full text-white"
             >
                 <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 py-4 z-30">
                     <Link href="/public" className="flex items-center pl-12">
