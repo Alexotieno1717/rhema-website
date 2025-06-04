@@ -99,7 +99,7 @@ const Page = () => {
                         {/* Contact Image (only on large screens) */}
                         <img
                             src="/assets/contact.png"
-                            className="hidden lg:block w-full h-[90vh] object-cover"
+                            className="hidden lg:block w-full object-cover"
                             alt="contact"
                         />
                     </div>
