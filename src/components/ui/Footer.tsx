@@ -15,7 +15,6 @@ const Footer = () => {
                 <Link href={'#'}>Pricing</Link>
                 <Link href={'#'}>Careers</Link>
                 <Link href={'#'}>Help</Link>
-                <Link href={'#'}>Privacy</Link>
             </div>
 
             <div className='text-[#667085]'>

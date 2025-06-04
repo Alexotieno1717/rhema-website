@@ -123,8 +123,8 @@ const Page = () => {
             <LatestNews />
 
 
-            <section className='relative flex flex-col lg:flex-row  bg-[#1B3959] w-full mt-10'>
-                <p className='text-4xl text-white font-semibold pl-[121px] py-[89px]'>&#34;God doesn’t call the qualified; He qualifies the called.&#34; — often attributed to various pastors and Christian leaders.
+            <section className='relative flex flex-col-reverse lg:flex-row  bg-[#1B3959] w-full mt-10'>
+                <p className='text-xl lg:text-4xl text-white font-semibold pl-10 py-10 lg:pl-[121px] lg:py-[89px]'>&#34;God doesn’t call the qualified; He qualifies the called.&#34; — often attributed to various pastors and Christian leaders.
                     <br /><br />
                     Would you like a quote on a specific theme like faith, purpose, or perseverance?</p>
                 <img src="/assets/Rev_Julian-Kyula.png" className='lg:-mt-[120px]' alt="Rev_Julian-Kyula" />
