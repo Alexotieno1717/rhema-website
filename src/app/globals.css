@@ -132,5 +132,21 @@
           #8D5B00 97.37%,
           #FFEA8E 129.53%
   );
-  /*height: 735px;*/
 }
+
+.custom-gradient-text {
+  background: linear-gradient(
+          113.02deg,
+          #D3A84B -10.29%,
+          #CEAF6F 21.87%,
+          #C79D38 47.04%,
+          #CBA043 72.2%,
+          #8D5B00 97.37%,
+          #FFEA8E 129.53%
+  );
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text fill transparent to show background */
+  background-clip: text; /* For other browsers */
+  color: transparent; /* fallback */
+}
+

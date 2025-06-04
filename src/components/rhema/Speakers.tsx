@@ -2,7 +2,7 @@ import React from 'react';
 
 const Speakers = () => {
     return (
-        <div className="px-14 lg:px-[162px]">
+        <div className="px-6 lg:px-[102px]">
             <h1 className="pb-9 text-4xl md:text-5xl font-extrabold text-[#1B3959]">
                 Speakers
             </h1>

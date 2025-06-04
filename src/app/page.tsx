@@ -25,7 +25,7 @@ export default function Home() {
                     <Navbar />
 
                     {/* Hero Section */}
-                    <div className="pt-32 pl-10 lg:pl-[624px] lg:pt-[121px]">
+                    <div className="pt-32 pl-10 lg:pl-[624px]">
                         <div>
                             <div className='z-20 lg:hidden'>
                                 <img
