@@ -6,15 +6,12 @@ export default function Home() {
         <>
             <main className="relative overflow-hidden">
                 {/* Background Container */}
-                <div className="custom-gradient mx-auto relative z-0 pb-24 lg:pb-[371px]">
-                    {/* Background Waves */}
-                    <img
-                        src="/assets/Layer_1.png"
-                        alt="Left wave"
-                        className="w-[650px] h-full absolute top-0 left-0 -z-10"
-                        // className="absolute w-[921.96px] h-[489.94px] top-[-185.09px] left-[438.75px] rotate-[83.48deg]"
-                    />
-
+                <div
+                    className="relative pb-24 lg:pb-48 z-10"
+                    style={{
+                        background: 'linear-gradient(to right, #FFEA8E, #D3A84B)',
+                    }}
+                >
                     <img
                         src="/assets/Clip path group.png"
                         alt="Right wave"
@@ -25,8 +22,8 @@ export default function Home() {
                     <Navbar />
 
                     {/* Hero Section */}
-                    <div className="pt-32 pl-10 lg:pl-[624px]">
-                        <div>
+                    <div className="pl-5 lg:pl-[24px]">
+                        <div className=''>
                             <div className='z-20 lg:hidden'>
                                 <img
                                     src="/assets/Rev_Julian-Kyula.png"
@@ -34,35 +31,39 @@ export default function Home() {
                                     className="w-full"
                                 />
                             </div>
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight">
-                                Text Header
-                            </h1>
-                            <p className="text-white py-8 text-lg font-normal">
-                                Body text here Body text hereBody text hereBody text hereBody text <br/>
-                                hereBody text hereBody text here
-                            </p>
-                            <Link href={'/partner'} className='cursor-pointer'>
-                                <button className="bg-white py-2.5 px-6 text-black font-semibold text-md rounded-full hover:bg-opacity-90 transition cursor-pointer">
-                                    Partner With us
-                                </button>
-                            </Link>
+                            <div className="text-center">
+                                <h1 className="text-2xl md:text-4xl lg:text-6xl font-extrabold text-black">
+                                    Empowering Communities. <br/> Transforming Systems
+                                </h1>
+                                <p className='pt-5 font-bold text-md'>MISSION | MINISTRY | MARKET PLACE</p>
+                                <p className="text-black py-8 text-lg font-normal">
+                                    JKM is a global apostolic movement empowering believers to thrive in faith, family, and the <br/> marketplace. Step into your calling and help shape the future of nations.
+                                </p>
+                            </div>
+                            <div className='text-center md:text-left'>
+                                <Link href={'/partner'} className='cursor-pointer lg:pl-[600px]'>
+                                    <button className="bg-white py-2.5 px-6 text-black font-semibold text-md rounded-full hover:bg-opacity-90 transition cursor-pointer">
+                                        Partner With us
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="relative flex flex-col lg:flex-row w-full">
+                <div className="relative flex flex-col lg:flex-row w-full lg:-mt-56 z-20 px-6 lg:px-10">
                     {/* Hero Image - Left Side */}
-                    <div className="hidden lg:block lg:w-[641px] lg:-mt-[543px] ">
+                    <div className="hidden lg:block lg:-mt-36">
                         <img
                             src="/assets/Rev_Julian-Kyula.png"
                             alt="Rev Julian"
-                            className="w-full"
+                            className="w-full h-auto max-h-[600px]"
                         />
 
                     </div>
 
                     {/*Cards Section - Overlapping the background*/}
-                    <div className="relative mt-10 px-10 lg:px-0 lg:-mt-72">
+                    <div className="relative mt-10 lg:px-10 ">
                         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                             {[
                                 { title: "The RHEMA Fest 2025", img: "/assets/rhema1.png" },

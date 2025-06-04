@@ -1,10 +1,9 @@
 "use client"
 import React from 'react';
 import Link from "next/link";
-import Image from 'next/image';
 import {Nav, StyledList, StyledListLinkSecondary} from "@/components/ui/ComponentsStyled";
 import {ChevronDownIcon, FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon} from 'lucide-react';
-import { Links } from '../../constants';
+import { Links } from '@/constants';
 
 interface HeaderProps {
     colors?: {
@@ -29,24 +28,23 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
         <>
             <Nav
                 $collapsed={collapsed}
-                className="transition ease-in-out delay-150 w-full text-white"
+                className="transition ease-in-out delay-150 w-full text-white z-50"
             >
-                <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 py-4 z-30">
-                    <Link href="/public" className="flex items-center pl-12">
-                        <Image
-                            src={'/assets/logo.png'}
+                <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 z-30">
+                    <Link href="/" className="flex items-center pl-12">
+                        <img
+                            src={'/assets/logo1.png'}
                             alt="JKM"
-                            width={122.2}
-                            height={101}
+                            className='w-[116px] h-[51px] lg:w-[238px] lg:h-[102px]'
                         />
                     </Link>
                     <div className="flex lg:order-2">
                         <div className='hidden lg:block pt-7 mr-5'>
-                            <Link href='/public' className='space-y-4'>
-                                <FacebookIcon className="w-10 h-10 " />
-                                <InstagramIcon className="w-10 h-10 " />
-                                <TwitterIcon className="w-10 h-10 " />
-                                <YoutubeIcon className="w-10 h-10 " />
+                            <Link href='/' className='text-black space-y-4'>
+                                <FacebookIcon className="w-7 h-7 " />
+                                <InstagramIcon className="w-7 h-7 " />
+                                <TwitterIcon className="w-7 h-7 " />
+                                <YoutubeIcon className="w-7 h-7 " />
                             </Link>
                         </div>
                         <button
@@ -87,7 +85,7 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
                                     <div key={item.id} className="relative group">
                                         <StyledList
                                             $colors={colors}
-                                            className=" menu-hover cursor-pointer flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
+                                            className=" menu-hover cursor-pointer flex items-center justify-between w-full py-2 pl-3 pr-4 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
                                         >
                                             <Link href={item.href} className="inline-flex items-center text-sm">
                                                 {item.label} <ChevronDownIcon className="w-3.5 h-3.5 ml-2.5" />
@@ -99,7 +97,7 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
                                         <StyledListLinkSecondary
                                             $colors={colors}
                                             href={item.href}
-                                            className="block py-2 pl-3 pr-4 text-sm font-semibold text-white rounded lg:bg-transparent lg:p-0 mb-3 lg:mb-0"
+                                            className="block py-2 pl-3 pr-4 text-lg font-semibold text-black rounded lg:bg-transparent lg:p-0 mb-3 lg:mb-0"
                                             aria-current="page"
                                         >
                                             {item.label}
