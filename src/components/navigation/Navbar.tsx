@@ -30,7 +30,7 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
                 $collapsed={collapsed}
                 className="transition ease-in-out delay-150 w-full text-white z-50"
             >
-                <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 z-30">
+                <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 py-4 lg:py-0 z-30">
                     <Link href="/" className="flex items-center pl-12">
                         <img
                             src={'/assets/logo1.png'}
