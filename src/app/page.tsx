@@ -66,23 +66,34 @@ export default function Home() {
                     <div className="relative mt-10 lg:px-10 ">
                         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                             {[
-                                { title: "The RHEMA Fest 2025", img: "/assets/rhema1.png" },
-                                { title: "About JK Ministry", img: "/assets/rhema2.png" },
-                                { title: "Ministry", img: "/assets/rhema3.png" },
-                                { title: "Kingdom Market Place", img: "/assets/rhema4.png" },
+                                { title: "The RHEMA Fest 2025", img: "/assets/rhema1.png", logo: "/assets/rf-logo.png" },
+                                { title: "About JK Ministry", img: "/assets/rhema2.png", logo: "/assets/rxp.png" },
+                                { title: "Ministry", img: "/assets/rhema3.png", logo: "/assets/logo-white.png" },
+                                { title: "Kingdom Market Place", img: "/assets/rhema4.png", logo: "/assets/logo-white.png" },
                             ].map((card, i) => (
-                                <div key={i} className="rounded-[6px] overflow-hidden lg:w-[300px]">
+                                <div key={i} className="relative rounded-[6px] overflow-hidden lg:w-[300px]">
                                     <Link href={'/rhemafest'}>
-                                        <img
-                                            src={card.img}
-                                            alt={card.title}
-                                            className="w-full"
-                                        />
+                                        <div className="relative w-full">
+                                            {/* Image */}
+                                            <img
+                                                src={card.img}
+                                                alt={card.title}
+                                                className="w-full h-auto object-cover"
+                                            />
+
+                                            {/* Overlay with black background */}
+                                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                                                {/* Logo on top */}
+                                                <img src={card.logo} alt="Logo" className="" />
+                                            </div>
+                                        </div>
+
                                         <div className="pt-4">
                                             <h3 className="text-md font-semibold text-black">{card.title}</h3>
                                         </div>
                                     </Link>
                                 </div>
+
                             ))}
                         </div>
                     </div>
