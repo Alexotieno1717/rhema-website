@@ -72,14 +72,16 @@ export default function Home() {
                                 { title: "Kingdom Market Place", img: "/assets/rhema4.png" },
                             ].map((card, i) => (
                                 <div key={i} className="rounded-[6px] overflow-hidden lg:w-[300px]">
-                                    <img
-                                        src={card.img}
-                                        alt={card.title}
-                                        className="w-full"
-                                    />
-                                    <div className="pt-4">
-                                        <h3 className="text-md font-semibold text-black">{card.title}</h3>
-                                    </div>
+                                    <Link href={'/rhemafest'}>
+                                        <img
+                                            src={card.img}
+                                            alt={card.title}
+                                            className="w-full"
+                                        />
+                                        <div className="pt-4">
+                                            <h3 className="text-md font-semibold text-black">{card.title}</h3>
+                                        </div>
+                                    </Link>
                                 </div>
                             ))}
                         </div>

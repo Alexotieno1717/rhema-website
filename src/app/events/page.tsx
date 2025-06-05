@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import Header from "@/components/navigation/Header";
 import EventCard from "@/components/event/EventCard";
 import Footer from "@/components/ui/Footer";
+import Swipper from "@/components/sections/Swipper";
 
 
 const days = ["Upcoming", "Past", "Recurring"];
@@ -66,7 +67,7 @@ const Page = () => {
             </h1>
             
             <div className='px-6 lg:px-[68px]'>
-                <img src="/assets/event_banner.png" className='w-full' alt="Event Banner" />
+                <Swipper />
             </div>
 
            <div className="px-6 lg:px-[68px] pt-[76px] pb-10">

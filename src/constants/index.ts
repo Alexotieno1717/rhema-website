@@ -3,7 +3,7 @@ const Links = [
     {
         id: 'Home',
         label: 'Home',
-        href: '/rhemafest',
+        href: '/',
         hasDropDown: false,
     },
     {
