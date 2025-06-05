@@ -59,7 +59,7 @@ const Journey = () => {
                     <p>
                         we want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and discipling nations with the truth and power of Jesus Christwe want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and
                         <br/><br/>
-                        discipling nations with the truth and power of Jesus Christwe want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and discipling nations with the truth and power of Jesus Christwe want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and discipling nations with the truth and power of Jesus Christ
+                        discipline nations with the truth and power of Jesus Christ we want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and discipling nations with the truth and power of Jesus Christwe want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and discipling nations with the truth and power of Jesus Christ
                     </p>
                 </div>
                 <div className='w-full'>
