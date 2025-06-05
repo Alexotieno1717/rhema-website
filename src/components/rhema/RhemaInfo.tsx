@@ -37,8 +37,15 @@ const RhemaInfo = () => {
                 </div>
             </div>
 
-            <div className="px-5 py-7 lg:pl-[102px] lg:py-14 ">
-                <img src="/assets/youtube3.png" className='w-full' alt=""/>
+            <div className="px-5 py-7 lg:px-[102px]  lg:py-14 ">
+                <iframe
+                    className="w-full h-[250px] md:h-[350px] lg:h-[700px] rounded-xl"
+                    src="https://www.youtube.com/embed/O0zk93DJFqo"
+                    title="Rhema Fest 2024"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
             </div>
         </div>
     );

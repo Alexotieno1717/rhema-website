@@ -26,8 +26,15 @@ const Page = () => {
                         &#34;We want to be able to impact more people and generations, transform lives and become a movement dedicated to spreading the Gospel, and disciple nations with the truth and power of Jesus Christ. We want you, too, to be partakers of this great call that will focus mainly on Mission. marketplace and Ministry&#34;
                     </p>
                 </div>
-                <div className='pt-4 lg:pt-0'>
-                    <img src="/assets/youtube2.png" className='' alt="youtube 2"/>
+                <div className='py-4'>
+                    <iframe
+                        className="w-full h-[250px] md:h-[350px] lg:h-[400px] rounded-xl"
+                        src="https://www.youtube.com/embed/O0zk93DJFqo"
+                        title="Rhema Fest 2024"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
                 </div>
             </div>
 
