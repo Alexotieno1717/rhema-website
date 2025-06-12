@@ -31,29 +31,32 @@ export default function Home() {
                                     className="w-full"
                                 />
                             </div>
-                            <div className="text-center">
-                                <h1 className="text-2xl md:text-4xl lg:text-6xl font-extrabold text-black">
-                                    Empowering Communities. <br/> Transforming Systems
-                                </h1>
-                                <p className='pt-5 font-bold text-md'>MISSION | MINISTRY | MARKET PLACE</p>
-                                <p className="text-black py-8 text-lg font-normal">
-                                    JKM is a global apostolic movement empowering believers to thrive in faith, family, and the <br/> marketplace. Step into your calling and help shape the future of nations.
-                                </p>
+                            <div>
+                                <div className="text-center">
+                                    <h1 className="text-2xl lg:text-3xl xl:text-6xl font-extrabold text-black">
+                                        Empowering Communities. <br/> Transforming Systems
+                                    </h1>
+                                    <p className='pt-5 font-bold text-md'>MISSION | MINISTRY | MARKET PLACE</p>
+                                    <p className="text-black py-8 text-md xl:text-lg font-normal">
+                                        JKM is a global apostolic movement empowering believers to thrive in faith, family, and the <br/> marketplace. Step into your calling and help shape the future of nations.
+                                    </p>
+                                </div>
+                                <div className='pl-0 lg:pl-[300px] xl:pl-[590px] text-center md:text-left'>
+                                    <Link href={'/partner'} className='cursor-pointer'>
+                                        <button className="bg-white py-2.5 px-6 text-black font-semibold text-md rounded-full hover:bg-opacity-90 transition cursor-pointer">
+                                            Partner With us
+                                        </button>
+                                    </Link>
+                                </div>
                             </div>
-                            <div className='text-center md:text-left'>
-                                <Link href={'/partner'} className='cursor-pointer lg:pl-[600px]'>
-                                    <button className="bg-white py-2.5 px-6 text-black font-semibold text-md rounded-full hover:bg-opacity-90 transition cursor-pointer">
-                                        Partner With us
-                                    </button>
-                                </Link>
-                            </div>
+
                         </div>
                     </div>
                 </div>
 
-                <div className="relative flex flex-col lg:flex-row w-full lg:-mt-56 z-20 px-6 lg:px-10">
+                <div className="relative flex flex-col lg:flex-row w-full md:-mt-24 lg:-mt-54 z-20 px-6 lg:px-10">
                     {/* Hero Image - Left Side */}
-                    <div className="hidden lg:block lg:-mt-36">
+                    <div className="hidden lg:block lg:-mt-10 xl:-mt-36">
                         <img
                             src="/assets/Rev_Julian-Kyula.png"
                             alt="Rev Julian"
@@ -71,14 +74,14 @@ export default function Home() {
                                 { title: "Ministry", img: "/assets/rhema3.png", logo: "/assets/logo-white.png" },
                                 { title: "Kingdom Market Place", img: "/assets/rhema4.png", logo: "/assets/logo-white.png" },
                             ].map((card, i) => (
-                                <div key={i} className="relative rounded-[6px] overflow-hidden lg:w-[300px]">
+                                <div key={i} className="relative rounded-[6px] overflow-hidden ">
                                     <Link href={'/rhemafest'}>
                                         <div className="relative w-full">
                                             {/* Image */}
                                             <img
                                                 src={card.img}
                                                 alt={card.title}
-                                                className="w-full h-auto object-cover"
+                                                className="w-full lg:w-[300px] h-full object-cover"
                                             />
 
                                             {/* Overlay with black background */}

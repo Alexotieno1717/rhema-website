@@ -28,14 +28,14 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
         <>
             <Nav
                 $collapsed={collapsed}
-                className="transition ease-in-out delay-150 w-full text-white z-50"
+                className="transition ease-in-out delay-150 w-full z-50"
             >
-                <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 py-4 lg:py-0 z-30">
-                    <Link href="/" className="flex items-center pl-12">
+                <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 py-2 lg:py-0 z-30">
+                    <Link href="/" className="flex items-center pl-6 xl:pl-12">
                         <img
                             src={'/assets/logo1.png'}
                             alt="JKM"
-                            className='w-[116px] h-[51px] lg:w-[238px] lg:h-[102px]'
+                            className='w-[116px] h-[51px] xl:w-[238px] xl:h-[102px]'
                         />
                     </Link>
                     <div className="flex lg:order-2">
@@ -79,7 +79,7 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
                         } lg:flex lg:w-auto lg:order-1"`}
                         id="navbar-sticky"
                     >
-                        <ul className="flex flex-col items-center mt-4 text-lg font-medium rounded lg:flex-row lg:space-x-[38px] lg:mt-0 lg:p-0 lg:border-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:top-8 ">
+                        <ul className="flex flex-col items-center mt-4  font-medium rounded lg:flex-row lg:space-x-[38px] lg:mt-0 lg:p-0 lg:border-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:top-8 ">
                             {Links.map((item) =>
                                 item.hasDropDown ? (
                                     <div key={item.id} className="relative group">
@@ -97,7 +97,7 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
                                         <StyledListLinkSecondary
                                             $colors={colors}
                                             href={item.href}
-                                            className="block py-2 pl-3 pr-4 text-lg font-semibold text-black rounded lg:bg-transparent lg:p-0 mb-3 lg:mb-0"
+                                            className="block py-2 pl-3 pr-4 lg:text-md xl:text-lg font-semibold text-black rounded lg:bg-transparent lg:p-0 mb-3 lg:mb-0"
                                             aria-current="page"
                                         >
                                             {item.label}
