@@ -9,8 +9,13 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Keyboard, Pagination, Navigation } from 'swiper/modules';
+import {IEvents} from "@/types";
 
-export default function Swipper() {
+interface SwipperProps {
+    items: IEvents;
+}
+
+export default function Swipper({items}: SwipperProps) {
     return (
         <>
             <Swiper
@@ -26,18 +31,12 @@ export default function Swipper() {
                 modules={[Keyboard, Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <img src="/assets/event_banner.png" className='w-full' alt="Event Banner" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/assets/swipper1.png" className='w-full' alt="Event Banner" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/assets/swipper2.png" className='w-full' alt="Event Banner" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/assets/swipper3.png" className='w-full' alt="Event Banner" />
-                </SwiperSlide>
+                {items.bannerImage.map((item, i) => (
+                    <SwiperSlide key={i}>
+                        <img src={item} className='w-full' alt="Event Banner" />
+                    </SwiperSlide>
+                ))}
+
             </Swiper>
         </>
     );

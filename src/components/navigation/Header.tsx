@@ -34,15 +34,15 @@ const Header = ({ colors = defaultValues }: HeaderProps) => {
                         ? colors.bg
                         : 'linear-gradient(to right, #FFEA8E, #D3A84B)',
                 }}
-                className="fixed w-full transition-all duration-300 px-5 lg:px-o py-2 lg:py-4"
+                className="fixed w-full transition-all duration-300 px-5 lg:px-o py-2 lg:py-2 z-50"
             >
-                <div className="flex flex-wrap items-center justify-between mx-auto pt-2 pb-[11px]">
+                <div className="flex flex-wrap items-center justify-between mx-auto">
                     <Link href="/" className="flex items-center pl-4 lg:pl-20">
                         <Image
-                            src={'/assets/logo.png'}
+                            src={'/assets/new_logo_2.png'}
                             alt="JKM"
-                            width={89}
-                            height={69}
+                            width={68}
+                            height={68}
                         />
                     </Link>
                     <div className="flex justify-center items-center lg:order-2">

@@ -9,18 +9,15 @@ const Footer = () => {
                 <img src="/assets/footer-logo.png" alt="footer logo" />
             </div>
 
-            <div className='flex justify-center items-center space-x-8'>
-                <Link href={'#'}>Overview</Link>
-                <Link href={'#'}>Features</Link>
-                <Link href={'#'}>Pricing</Link>
-                <Link href={'#'}>Careers</Link>
-                <Link href={'#'}>Help</Link>
+            <div className='text-[#667085]'>
+                <p>© All Rights Reserved. 2025 KJM</p>
             </div>
 
-            <div className='text-[#667085]'>
-                <p>© 2025 KJM</p>
+            <div className='flex justify-center items-center space-x-8 text-[#667085]'>
+                <Link href={'#'}>Terms</Link>
+                <Link href={'#'}>Privacy</Link>
+                <Link href={'#'}>Cookies</Link>
             </div>
-            
         </div>
     );
 };

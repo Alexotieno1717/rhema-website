@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import {IAboutContent} from "@/types";
 
 
 const slides = [
@@ -10,7 +11,11 @@ const slides = [
     {'year': '2024'},
 ];
 
-const Journey = () => {
+interface JourneyProps {
+    item: IAboutContent;
+}
+
+const Journey = ({item}: JourneyProps) => {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -54,22 +59,20 @@ const Journey = () => {
             </div>
 
 
-            <div className='flex flex-col lg:flex-row space-x-16 py-12 lg:py-24'>
-                <div className='lg:w-[412px]'>
-                    <p>
-                        we want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and discipling nations with the truth and power of Jesus Christwe want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and
-                        <br/><br/>
-                        discipline nations with the truth and power of Jesus Christ we want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and discipling nations with the truth and power of Jesus Christwe want to be able to impact more people and generations , transform lives and become a  movement dedicated to spreading the Gospel, and discipling nations with the truth and power of Jesus Christ
-                    </p>
-                </div>
-                <div className='w-full'>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
-                        <div className='bg-gray-600 h-[380px]'> image 1</div>
-                        <div className='bg-gray-600 h-[380px]'>image 2</div>
+            {item.journey.map((item, index) => (
+                <div className='flex flex-col lg:flex-row space-x-16 py-12 lg:py-24' key={index}>
+                    <div className='lg:w-[412px] whitespace-pre-line'>
+                        <p>{item.description}</p>
                     </div>
-                    <div className='bg-gray-600 h-[380px]'> image 3</div>
+                    <div className='w-full'>
+                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
+                            <div className='bg-gray-600 h-[380px]'> image 1</div>
+                            <div className='bg-gray-600 h-[380px]'>image 2</div>
+                        </div>
+                        <div className='bg-gray-600 h-[380px]'> image 3</div>
+                    </div>
                 </div>
-            </div>
+            ))}
         </div>
     );
 };

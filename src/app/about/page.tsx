@@ -7,26 +7,21 @@ import Journey from "@/components/about/Journey";
 import HeroSection from "@/components/rhema/HeroSection";
 import LatestNews from "@/components/rhema/LatestNews";
 import Footer from "@/components/ui/Footer";
+import {AboutPageContent, HeroSectionContent, LatestNewsContent} from "@/mock";
+import ContactInfo from "@/components/sections/ContactInfo";
 
 const Page = () => {
     return (
         <>
-            <div className="relative z-50">
-                <Header />
-            </div>
-            <AboutBanner />
-            <AboutMission />
-            <AboutImpact />
-            <Journey />
-            <HeroSection />
-            <LatestNews />
+            <Header />
+            <AboutBanner item={AboutPageContent} />
+            <AboutMission item={AboutPageContent} />
+            <AboutImpact item={AboutPageContent} />
+            <Journey item={AboutPageContent} />
+            <HeroSection data={HeroSectionContent} />
+            <LatestNews data={LatestNewsContent} />
+            <ContactInfo />
             <Footer />
-
-
-
-
-
-
         </>
     );
 };
