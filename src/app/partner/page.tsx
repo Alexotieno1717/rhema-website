@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import Header from "@/components/navigation/Header";
 import LatestNews from "@/components/rhema/LatestNews";
 import Footer from "@/components/ui/Footer";

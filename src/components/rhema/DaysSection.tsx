@@ -11,7 +11,7 @@ const DaysSection = ({data}: DaysSectionProps) => {
 
 
     return (
-        <div className="px-6 py-12 lg:px-32 lg:py-24 bg-white">
+        <div className="px-6 py-12 lg:px-26 lg:py-24 bg-white">
             <h2 className="pb-9 text-4xl md:text-5xl font-extrabold text-[#1B3959]">DAYS</h2>
 
             {/* Nav Pills */}

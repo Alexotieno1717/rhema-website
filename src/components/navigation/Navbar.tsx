@@ -19,6 +19,12 @@ const defaultValues = {
     dividerColor: '#fff',
 };
 
+const socialLinks = [
+    { href: "https://facebook.com", icon: <FacebookIcon className="w-7 h-7" /> },
+    { href: "https://instagram.com", icon: <InstagramIcon className="w-7 h-7" /> },
+    { href: "https://twitter.com", icon: <TwitterIcon className="w-7 h-7" /> },
+    { href: "https://youtube.com", icon: <YoutubeIcon className="w-7 h-7" /> },
+];
 
 const Navbar = ({ colors = defaultValues }: HeaderProps) => {
     const [collapsed, setCollapsed] = React.useState<boolean>(false);
@@ -33,19 +39,27 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
                 <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 py-2 lg:py-0 z-30">
                     <Link href="/" className="flex items-center pl-6 xl:pl-12">
                         <img
-                            src={'/assets/logo1.png'}
+                            src={'/assets/new_logo_2.png'}
                             alt="JKM"
-                            className='w-[116px] h-[51px] xl:w-[238px] xl:h-[102px]'
+                            className="w-full lg:w-[120px] lg:h-[120px] ml-0 lg:ml-40"
+                            // className='w-[116px] h-[51px] xl:w-[238px] xl:h-[102px]'
                         />
                     </Link>
                     <div className="flex lg:order-2">
                         <div className='hidden lg:block pt-7 mr-5'>
-                            <Link href='/' className='text-black space-y-4'>
-                                <FacebookIcon className="w-7 h-7 " />
-                                <InstagramIcon className="w-7 h-7 " />
-                                <TwitterIcon className="w-7 h-7 " />
-                                <YoutubeIcon className="w-7 h-7 " />
-                            </Link>
+                            <div className="space-y-4">
+                                {socialLinks.map(({ href, icon }, index) => (
+                                    <Link
+                                        key={index}
+                                        href={href}
+                                        className="text-black hover:text-white duration-300 block"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {icon}
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                         <button
                             onClick={toggleCollapse}

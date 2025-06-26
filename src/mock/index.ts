@@ -18,10 +18,10 @@ const HomeContent: IHomeContent = {
     buttonText: 'Partner With us',
     img: "/assets/Rev_Julian-Kyula.png",
     data : [
-        { id: "1", title: "The RHEMA Fest 2025", img: "/assets/rhema1.png", logo: "/assets/rf-logo.png" },
-        { id: "2", title: "About JK Ministry", img: "/assets/rhema2.png", logo: "/assets/rxp.png" },
-        { id: "3", title: "Ministry", img: "/assets/rhema3.png", logo: "/assets/logo-white.png" },
-        { id: "4", title: "Kingdom Market Place", img: "/assets/rhema4.png", logo: "/assets/logo-white.png" },
+        { id: "1", title: "RHEMA Feast", img: "/assets/rhema1.png", logo: "/assets/rf-logo.png" },
+        { id: "2", title: "RXP", img: "/assets/rhema2.png", logo: "/assets/rxp.png" },
+        { id: "3", title: "Business Forum", img: "/assets/rhema3.png", logo: "/assets/bf.png" },
+        { id: "4", title: "Kingdom Commonwealth", img: "/assets/rhema4.png", logo: "/assets/kc.png" },
     ]
 }
 const PartnersSliderContent: IPartnersSlider = {
@@ -145,7 +145,7 @@ const HeroSectionContent: IHeroContent ={
 
 const LatestNewsContent: ILatestNews = {
     id: "latestNews",
-    title: "Latest News",
+    title: "announcements",
     description: "Interviews, tips, guides, industry best practices, and news.",
     buttonText: "Read more",
     data: [

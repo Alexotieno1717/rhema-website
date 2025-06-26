@@ -7,7 +7,7 @@ interface LatestNewsProps {
 
 export default function LatestNews({data}: LatestNewsProps) {
     return (
-        <section className="py-16 px-4 md:px-10 lg:px-20 bg-white">
+        <section className="py-16 px-4 md:px-10 lg:px-26 bg-white">
             <div className="text-center mb-12">
                 <h2 className="text-5xl font-black text-[#1B3959] pb-5 uppercase">{data.title}</h2>
                 <p className="text-xl font-normal mt-2">{data.description}</p>

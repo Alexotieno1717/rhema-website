@@ -10,7 +10,7 @@ const RhemaInfo = ({data}: RhemaInfoProps) => {
     return (
         <div>
             {/* HERO + COUNTDOWN SECTION */}
-            <div className="px-6 pt-4 lg:px-[169px] lg:pt-[24px]">
+            <div className="px-6 pt-4 lg:px-26 lg:pt-[24px]">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[84px]">
                     {/* Left: Title and Description */}
                     <div className="w-full">
@@ -28,7 +28,7 @@ const RhemaInfo = ({data}: RhemaInfoProps) => {
             </div>
 
             {/* POSTER + STATS SECTION */}
-            <div className="px-6 lg:px-[169px] pt-12 flex flex-col lg:flex-row gap-6 lg:gap-0">
+            <div className="px-6 lg:px-26 pt-12 flex flex-col lg:flex-row gap-6 lg:gap-0">
                 {/* Poster Image */}
                 <div className="w-full lg:w-[50%]">
                     <img src="/assets/rhema_poster.png" alt="rhema" className="w-full object-cover" />

@@ -1,10 +1,10 @@
+import React from 'react';
 import Navbar from "@/components/navigation/Navbar";
 import Link from "next/link";
 import HomeCards from "@/components/sections/HomeCards";
 import {HomeContent} from "@/mock";
-import React from "react";
 
-export default function Home() {
+const Page = () => {
     return (
         <div>
             <main className="relative overflow-visible">
@@ -61,4 +61,6 @@ export default function Home() {
             </main>
         </div>
     );
-}
+};
+
+export default Page;
