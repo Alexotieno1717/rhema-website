@@ -17,8 +17,8 @@ const Speakers = ({data}: SpeakersProps) => {
                     <div key={index} className="flex flex-col space-y-4">
                         <img src={item.image} alt="speakers" className="w-full "/>
                         <h4 className="mt-4 text-xl font-semibold text-[#1B3959]">{item.title}</h4>
-                        <p className="text-lg text-blue-600 font-medium">{item.subtitle}</p>
-                        <p className="text-[#101828] text-sm font-normal">{item.description}</p>
+                        {/*<p className="text-lg text-blue-600 font-medium">{item.subtitle}</p>*/}
+                        {/*<p className="text-[#101828] text-sm font-normal">{item.description}</p>*/}
                     </div>
                 ))}
             </div>
