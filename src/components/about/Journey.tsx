@@ -31,8 +31,8 @@ const Journey = ({item}: JourneyProps) => {
         <div className="px-6 lg:px-[102px]">
             <h1 className='text-3xl font-black text-center pt-[59px]'>Our Journey</h1>
 
-
-            <div className="years-carousel max-w-[924px] mx-auto flex space-x-12 md:space-x-32 pl-4 md:pl-24">
+            {/*i have remove class flex when the year carousel is need kindly return it */}
+            <div className="years-carousel max-w-[924px] mx-auto  space-x-12 md:space-x-32 pl-4 md:pl-24 hidden">
                 {slides?.map((item, index) => (
                     <div key={index} className="z-10">
                         <button

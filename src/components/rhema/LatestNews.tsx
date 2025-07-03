@@ -32,9 +32,9 @@ export default function LatestNews({data}: LatestNewsProps) {
             </div>
 
             <div className="flex justify-center mt-10">
-                <button className="bg-[#1B3959] text-white px-9 py-3.5 rounded-full">
-                    {data.buttonText}
-                </button>
+                {/*<button className="bg-[#1B3959] text-white px-9 py-3.5 rounded-full">*/}
+                {/*    {data.buttonText}*/}
+                {/*</button>*/}
             </div>
         </section>
     );

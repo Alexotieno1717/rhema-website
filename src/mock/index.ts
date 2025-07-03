@@ -223,18 +223,21 @@ const PartnerContent: IPartners ={
         data: [
             {
                 id: "1",
+                slug: "silver",
                 image: "/assets/brown.png",
                 description: "If your auto debit gift is at least $40/month, you will be considered an Aaron’s Army Partner. You can also submit an immediate one-time advanced gift of $400 to qualify for Aaron’s Army.",
                 buttonText: "Get Started"
             },
             {
                 id: "2",
+                slug: "gold",
                 image: "/assets/silver.png",
                 description: "If your auto debit gift is at least $40/month, you will be considered an Aaron’s Army Partner. You can also submit an immediate one-time advanced gift of $400 to qualify for Aaron’s Army.",
                 buttonText: "Get Started"
             },
             {
                 id: "3",
+                slug: "platinum",
                 image: "/assets/gold.png",
                 description: "If your auto debit gift is at least $40/month, you will be considered an Aaron’s Army Partner. You can also submit an immediate one-time advanced gift of $400 to qualify for Aaron’s Army.",
                 buttonText: "Get Started"

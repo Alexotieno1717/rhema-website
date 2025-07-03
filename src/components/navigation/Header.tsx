@@ -5,6 +5,7 @@ import Image from 'next/image';
 import {Nav, StyledList, StyledListLinkSecondary} from "@/components/ui/ComponentsStyled";
 import {ChevronDownIcon} from 'lucide-react';
 import { Links } from '@/constants';
+import {usePathname} from "next/navigation";
 
 interface HeaderProps {
     colors?: {
@@ -22,6 +23,8 @@ const defaultValues = {
 
 const Header = ({ colors = defaultValues }: HeaderProps) => {
     const [collapsed, setCollapsed] = React.useState<boolean>(false);
+
+    const pathname = usePathname()
 
     const toggleCollapse = () => setCollapsed(!collapsed);
 
@@ -76,14 +79,18 @@ const Header = ({ colors = defaultValues }: HeaderProps) => {
                         id="navbar-sticky"
                     >
                         <ul className="flex flex-col mt-4 text-lg font-medium lg:flex-row lg:space-x-[38px] lg:mt-0">
-                            {Links.map((item) =>
-                                item.hasDropDown ? (
+                            {Links.map((item) => {
+                                const isActive = pathname === item.href;
+
+                                return item.hasDropDown ? (
                                     <div key={item.id} className="relative group">
                                         <StyledList
                                             $colors={colors}
-                                            className="menu-hover cursor-pointer flex items-center justify-between w-full py-2 pl-3 pr-4 text-lg text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
+                                            className={`menu-hover cursor-pointer flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:border-0 md:p-0 md:w-auto ${
+                                                isActive ? 'text-white font-black' : 'text-black'
+                                            }`}
                                         >
-                                            <Link href={item.href} className="inline-flex items-center text-lg">
+                                            <Link href={item.href} className="inline-flex items-center text-sm">
                                                 {item.label} <ChevronDownIcon className="w-3.5 h-3.5 ml-2.5" />
                                             </Link>
                                         </StyledList>
@@ -93,14 +100,16 @@ const Header = ({ colors = defaultValues }: HeaderProps) => {
                                         <StyledListLinkSecondary
                                             $colors={colors}
                                             href={item.href}
-                                            className="block py-2 pl-3 pr-4 text-lg font-medium text-black rounded lg:p-0 mb-3 lg:mb-0"
-                                            aria-current="page"
+                                            className={`block py-2 pl-3 pr-4 lg:text-md xl:text-lg font-semibold rounded lg:bg-transparent lg:p-0 mb-3 lg:mb-0 ${
+                                                isActive ? 'text-white font-black' : 'text-black'
+                                            }`}
+                                            aria-current={isActive ? 'page' : undefined}
                                         >
                                             {item.label}
                                         </StyledListLinkSecondary>
                                     </li>
-                                )
-                            )}
+                                );
+                            })}
                         </ul>
                     </div>
                 </div>

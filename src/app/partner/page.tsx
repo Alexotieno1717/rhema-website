@@ -1,8 +1,7 @@
  import React from 'react';
 import Header from "@/components/navigation/Header";
-import LatestNews from "@/components/rhema/LatestNews";
 import Footer from "@/components/ui/Footer";
-import {LatestNewsContent, PartnerContent} from "@/mock";
+import {PartnerContent} from "@/mock";
 import PartnersBanner from "@/components/sections/PartnersBanner";
 import PartnerImpact from "@/components/sections/PartnerImpact";
 import PartnerHeroSection from "@/components/sections/PartnerHeroSection";
@@ -18,7 +17,6 @@ const Page = () => {
             <PartnerImpact data={PartnerContent} />
             <PartnerHeroSection data={PartnerContent} />
             <PartnerLevels data={PartnerContent} />
-            <LatestNews data={LatestNewsContent} />
             <PartnerQuote data={PartnerContent} />
             <ContactInfo />
             <Footer />

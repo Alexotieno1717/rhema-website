@@ -11,18 +11,9 @@ const PartnersBanner = ({data}: PartnerBannerProps) => {
                 <h1>{data.title}</h1>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 w-full space-x-[79px] bg-[#EFEFEF] lg:pt-[52px] pl-10 lg:pl-[105px] lg:pr-[149px]">
-                <div className='text-left lg:text-center text-lg lg:text-2xl font-medium pt-6 lg:pt-[64px]'>
+            <div className="w-full space-x-3 bg-[#EFEFEF] lg:pt-[52px] py-8 px-6 lg:pl-[105px] lg:pr-[149px]">
+                <div className='text-center text-lg lg:text-2xl font-medium'>
                     <p>{data.description}</p>
-                </div>
-                <div className='py-4'>
-                    <iframe
-                        className="w-full h-[250px] md:h-[350px] lg:h-[400px] rounded-xl"
-                        src={data.youtubeLink}
-                        title={data.youtubeLinkText}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
                 </div>
             </div>
         </>
