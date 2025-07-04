@@ -1,0 +1,198 @@
+"use client"
+import React, { useState } from 'react';
+import { Check, User, Users, FileCheck } from 'lucide-react';
+import ContactInfoStep from "@/components/sections/ContactInfoStep";
+import SpouseInfoStep from "@/components/sections/SpouseInfoStep";
+import ReviewStep from "@/components/sections/ReviewStep";
+import {Card, CardContent, CardHeader} from "@/components/ui/card";
+import {Progress} from "@/components/ui/progress";
+
+export interface ContactData {
+    firstName: string;
+    lastName: string;
+    email: string;
+    address1: string;
+    address2: string;
+    city: string;
+    country: string;
+    state: string;
+    phone: string;
+    dateOfBirth: string;
+    includeSpouse: boolean;
+}
+
+export interface SpouseData {
+    spouseLastName: string;
+    spouseEmail: string;
+    spouseAddress1: string;
+    spouseAddress2: string;
+    spouseCity: string;
+    spouseCountry: string;
+    spouseState: string;
+    spouseOrganization: string;
+    spousePhone: string;
+}
+
+const ContactStepper = () => {
+    const [currentStep, setCurrentStep] = useState(1);
+    const [contactData, setContactData] = useState<ContactData>({
+        firstName: '',
+        lastName: '',
+        email: '',
+        address1: '',
+        address2: '',
+        city: '',
+        country: '',
+        state: '',
+        phone: '',
+        dateOfBirth: '',
+        includeSpouse: false,
+    });
+
+    const [spouseData, setSpouseData] = useState<SpouseData>({
+        spouseLastName: '',
+        spouseEmail: '',
+        spouseAddress1: '',
+        spouseAddress2: '',
+        spouseCity: '',
+        spouseCountry: '',
+        spouseState: '',
+        spouseOrganization: '',
+        spousePhone: '',
+    });
+
+    const steps = [
+        { number: 1, title: 'Contact Information', icon: User },
+        { number: 2, title: 'Spouse Information', icon: Users, conditional: true },
+        { number: 3, title: 'Review & Submit', icon: FileCheck },
+    ];
+
+    const getVisibleSteps = () => {
+        if (contactData.includeSpouse) {
+            return steps;
+        }
+        return steps.filter(step => !step.conditional);
+    };
+
+    const getProgress = () => {
+        const visibleSteps = getVisibleSteps();
+        return (currentStep / visibleSteps.length) * 100;
+    };
+
+    const handleNext = () => {
+        const visibleSteps = getVisibleSteps();
+        if (currentStep < visibleSteps.length) {
+            if (currentStep === 1 && !contactData.includeSpouse) {
+                setCurrentStep(3); // Skip spouse step
+            } else {
+                setCurrentStep(currentStep + 1);
+            }
+        }
+    };
+
+    const handlePrevious = () => {
+        if (currentStep > 1) {
+            if (currentStep === 3 && !contactData.includeSpouse) {
+                setCurrentStep(1); // Skip spouse step when going back
+            } else {
+                setCurrentStep(currentStep - 1);
+            }
+        }
+    };
+
+    const handleSubmit = () => {
+        console.log('Form submitted:', { contactData, spouseData });
+        alert('Form submitted successfully!');
+    };
+
+    const renderStep = () => {
+        switch (currentStep) {
+            case 1:
+                return (
+                    <ContactInfoStep
+                        data={contactData}
+                        onChange={setContactData}
+                        onNext={handleNext}
+                    />
+                );
+            case 2:
+                return (
+                    <SpouseInfoStep
+                        data={spouseData}
+                        onChange={setSpouseData}
+                        onNext={handleNext}
+                        onPrevious={handlePrevious}
+                    />
+                );
+            case 3:
+                return (
+                    <ReviewStep
+                        contactData={contactData}
+                        spouseData={spouseData}
+                        onPrevious={handlePrevious}
+                        onSubmit={handleSubmit}
+                    />
+                );
+            default:
+                return null;
+        }
+    };
+
+    const visibleSteps = getVisibleSteps();
+
+    return (
+        <div className="w-full max-w-3xl mx-auto">
+            <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm">
+                <CardHeader className="pb-6">
+                    <div className="mb-6">
+                        <Progress value={getProgress()} className="h-2" />
+                    </div>
+
+                    <div className="flex justify-between items-center">
+                        {visibleSteps.map((step) => {
+                            const Icon = step.icon;
+                            const isActive = step.number === currentStep;
+                            const isCompleted = step.number < currentStep;
+                            // const stepNumber = contactData.includeSpouse ? step.number : (step.number === 3 ? 2 : step.number);
+
+                            return (
+                                <div key={step.number} className="flex flex-col items-center">
+                                    <div
+                                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                                            isCompleted
+                                                ? 'bg-green-500 text-white'
+                                                : isActive
+                                                    ? 'bg-blue-600 text-white'
+                                                    : 'bg-gray-200 text-gray-500'
+                                        }`}
+                                    >
+                                        {isCompleted ? (
+                                            <Check className="w-6 h-6" />
+                                        ) : (
+                                            <Icon className="w-6 h-6" />
+                                        )}
+                                    </div>
+                                    <span
+                                        className={`mt-2 text-sm font-medium transition-colors duration-300 ${
+                                            isActive ? 'text-blue-600' : isCompleted ? 'text-green-600' : 'text-gray-500'
+                                        }`}
+                                    >
+                    {step.title}
+                  </span>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </CardHeader>
+
+                <CardContent className="pt-0">
+                    <div className="animate-fade-in">
+                        {renderStep()}
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+    );
+};
+
+export default ContactStepper;
