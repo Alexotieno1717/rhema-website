@@ -15,7 +15,7 @@ const DaysSection = ({data}: DaysSectionProps) => {
             <h2 className="pb-9 text-4xl md:text-5xl font-extrabold text-[#1B3959]">DAYS</h2>
 
             {/* Nav Pills */}
-            <div className="flex gap-4 mb-10">
+            <div className="flex gap-4 mb-10 hidden">
                 {data.days.days.map((day, index) => (
                     <button
                         key={index}

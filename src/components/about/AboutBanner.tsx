@@ -7,7 +7,7 @@ interface AboutBannerProps {
 const AboutBanner = ({item}: AboutBannerProps) => {
     return (
         <div>
-            <section className="relative h-[30vh] lg:h-[65vh] flex items-center justify-center text-white">
+            <section className="relative h-[65vh] flex items-center justify-center text-white">
                 {/* Background image */}
                 <div className="absolute inset-0">
                     <img
@@ -17,17 +17,17 @@ const AboutBanner = ({item}: AboutBannerProps) => {
                     />
                     <div className="absolute inset-0 bg-black/60 bg-opacity-50" />
                 </div>
+            </section>
 
-                {/* Content */}
-                <div className="relative px-6 text-center">
-                    <h1 className="custom-gradient-text text-4xl pt-14 lg:pt-0 lg:text-7xl font-[1000] leading-snug mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 pt-14 px-6 lg:px-64">
+                <div className="lg:w-[322px]">
+                    <h1 className="custom-gradient-text text-4xl lg:text-5xl font-[1000] leading-snug mb-6">
                         {item.heroTitle}
                     </h1>
                 </div>
-            </section>
-
-            <div className='flex justify-center lg:text-center px-6 lg:px-0 pt-10 lg:pt-16.5'>
-                <p className='lg:w-[881px] text-md font-medium whitespace-pre-line'>{item.introDescription}</p>
+                <div className=''>
+                    <p className=' text-md font-medium whitespace-pre-line'>{item.introDescription}</p>
+                </div>
             </div>
         </div>
     );

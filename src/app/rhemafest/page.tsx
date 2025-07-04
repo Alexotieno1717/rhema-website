@@ -41,8 +41,6 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-
-
             <DaysSection data={RhemaFeastContent} />
             <LatestNews data={LatestNewsContent} />
             <Footer />

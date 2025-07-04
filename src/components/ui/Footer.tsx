@@ -10,7 +10,7 @@ const Footer = () => {
             </div>
 
             <div className='text-[#667085]'>
-                <p>© All Rights Reserved. 2025 KJM</p>
+                <p>© All Rights Reserved. {new Date().getFullYear()} KJM</p>
             </div>
 
             <div className='flex justify-center items-center space-x-8 text-[#667085]'>
