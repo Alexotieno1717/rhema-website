@@ -79,15 +79,9 @@ const AboutPageContent: IAboutContent = {
     id: "About-jkm",
     heroTitle: "ABOUT JKM GLOBAL",
     heroBackgroundImage: "/assets/RXP.jpg",
-    introDescription: `A movement of faith, fire, and legacy. Join the thousands called to rise.
+    introDescription: `Julian Kyula Global Ministries (JKGM) is a faith-driven movement dedicated to transforming lives and nations through the power of God’s Word, apostolic insight, and marketplace impact. Founded by Reverend Julian Kyula, this global ministry exists to equip individuals, leaders, and communities to thrive in their divine purpose across the mission field, ministry work, and the marketplace. Through inspired teaching, prayer, strategic gatherings, and practical outreach, we are raising a generation of kingdom-minded believers who are bold, innovative, and grounded in truth.
 
-    Rhema Feast is a significant annual spiritual event that began in 2015. This year's Rhema Feast will take place 1st - 5th September 2025.
-    We are an apostolic movement led by visionary Bishop and entrepreneur Julian Kyula, and its mission is to share the unadulterated and authentic word of God to nations and all generations.
-    
-    JKM Global Ministries has several expressions under it, mainly RXP, JK Global Business Summits, JK Global Partners, Media Expansion, and Rhema Feast.
-    
-    We want to be able to impact more people and generations, transform lives, and become a movement dedicated to spreading the Gospel and discipling nations with the truth and power of Jesus Christ.
-    `,
+     JKGM is committed to seeing lives restored, systems reformed, and God’s glory revealed across the earth whether through global conferences, media outreach, church planting, or economic empowerment initiatives,`,
 
     visionTitle: "VISION",
     visionDescription: "To build a world where spiritual leadership, innovation, and enterprise work together to restore dignity, equity,and opportunity to underserved communities globally.",
