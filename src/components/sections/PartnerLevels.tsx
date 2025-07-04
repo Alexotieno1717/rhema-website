@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Users, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import {IPartners} from "@/types";
+import { useRouter } from 'next/navigation';
 
 type Step = 'welcome' | 'type' | 'level' | 'details';
 type PartnerType = 'individual' | 'corporate' | null;
@@ -17,6 +18,8 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
     const [currentStep, setCurrentStep] = useState<Step>('welcome');
     const [partnerType, setPartnerType] = useState<PartnerType>(null);
     const [partnerLevel, setPartnerLevel] = useState<PartnerLevel>(null);
+
+    const router = useRouter();
 
     const nextStep = () => {
         if (currentStep === 'welcome') setCurrentStep('type');
@@ -218,8 +221,7 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                 <Button
                     className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer"
                     onClick={() => {
-                        // Here you would typically submit the form or navigate to a detailed form
-                        alert(`Partnership application started!\nType: ${partnerType}\nLevel: ${partnerLevel}`);
+                        router.push('/member')
                     }}
                 >
                     Complete Application
