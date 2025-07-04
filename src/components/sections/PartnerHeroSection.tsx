@@ -30,7 +30,7 @@ const PartnerHeroSection = ({data}: PartnerHeroSectionProps) => {
                 <div className="relative z-20 w-full px-4 mt-8 lg:mt-14">
                     <div className="flex flex-col lg:flex-row justify-center items-stretch max-w-6xl mx-auto">
                         {/* Text Box */}
-                        <div className="bg-white shadow-lg p-6 sm:p-8 lg:p-8 w-full lg:w-1/2 flex flex-col">
+                        <div className="bg-white shadow-lg p-6 sm:p-8 w-full lg:w-1/2 flex flex-col">
                             <h1 className="text-2xl sm:text-3xl lg:text-5xl text-[#1B3959] font-bold leading-snug mb-4 sm:mb-6 uppercase">
                                 {data.partner.title}
                             </h1>
