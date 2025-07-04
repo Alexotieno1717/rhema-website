@@ -152,7 +152,7 @@ const SpouseInfoStep: React.FC<SpouseInfoStepProps> = ({ data, onChange, onNext,
                 <Button
                     onClick={onNext}
                     disabled={!isFormValid()}
-                    className="px-8 py-2 bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+                    className="px-8 py-2 bg-[#C79D38] hover:bg-[#8D5B00] cursor-pointer transition-colors duration-200"
                 >
                     Next Step
                 </Button>

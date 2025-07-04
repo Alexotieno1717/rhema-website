@@ -141,7 +141,7 @@ const ContactStepper = () => {
     const visibleSteps = getVisibleSteps();
 
     return (
-        <div className="w-full max-w-3xl mx-auto">
+        <div className="w-full max-w-3xl mx-auto border border-gray-200 rounded-lg">
             <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm">
                 <CardHeader className="pb-6">
                     <div className="mb-6">
@@ -162,7 +162,7 @@ const ContactStepper = () => {
                                             isCompleted
                                                 ? 'bg-green-500 text-white'
                                                 : isActive
-                                                    ? 'bg-blue-600 text-white'
+                                                    ? 'bg-[#C79D38] text-white'
                                                     : 'bg-gray-200 text-gray-500'
                                         }`}
                                     >
@@ -174,11 +174,11 @@ const ContactStepper = () => {
                                     </div>
                                     <span
                                         className={`mt-2 text-sm font-medium transition-colors duration-300 ${
-                                            isActive ? 'text-blue-600' : isCompleted ? 'text-green-600' : 'text-gray-500'
+                                            isActive ? 'text-[#C79D38]' : isCompleted ? 'text-green-600' : 'text-gray-500'
                                         }`}
                                     >
-                    {step.title}
-                  </span>
+                                       {step.title}
+                                    </span>
                                 </div>
                             );
                         })}

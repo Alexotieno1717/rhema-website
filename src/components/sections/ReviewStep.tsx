@@ -129,7 +129,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ contactData, spouseData, onPrev
                     className="px-8 py-2 bg-green-600 hover:bg-green-700 transition-colors duration-200"
                 >
                     <Send className="w-4 h-4 mr-2" />
-                    Submit Form
+                    Submit Details
                 </Button>
             </div>
         </div>
