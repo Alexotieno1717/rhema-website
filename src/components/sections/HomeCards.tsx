@@ -8,10 +8,10 @@ interface HomeCardsProps {
 
 const HomeCards = ({items}: HomeCardsProps) => {
     return (
-        <div className="relative mt-5 pr-0 lg:pr-4">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+        <div className="relative mt-5 pr-0 lg:pr-4 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {items.data.map((card, i) => (
-                    <div key={i} className="relative rounded-[6px] overflow-hidden group">
+                    <div key={i} className="relative rounded-[6px] overflow-hidden group w-full">
                         <Link href={'/rhemafest'}>
                             <div className="relative w-full">
                                 {/* Image */}

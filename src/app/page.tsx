@@ -9,7 +9,7 @@ export default function Home() {
         <div>
             <main className="relative overflow-visible">
                 <div
-                    className="relative pb-20 lg:pb-48 z-10 max-h-[150vh] md:max-h-[100vh] lg:max-h-[90vh] px-2 lg:px-0"
+                    className="relative pb-20 lg:pb-48 z-10 max-h-[150vh] md:max-h-[150vh] lg:max-h-[90vh] px-2 lg:px-0"
                     style={{
                         background: 'linear-gradient(to right, #FFEA8E, #D3A84B)',
                     }}
@@ -28,7 +28,7 @@ export default function Home() {
                             <img src="/assets/Rev_Julian-Kyula.png" className="pt-0 lg:pt-10" alt="Rev Julian"/>
                         </div>
                         <div>
-                            <div className="text-center lg:text-left w-3xl">
+                            <div className="text-center lg:text-left lg:w-3xl">
                                 <h1 className="text-2xl lg:text-3xl xl:text-6xl font-extrabold text-black">
                                     Empowering Communities. Transforming Systems
                                 </h1>
@@ -42,7 +42,7 @@ export default function Home() {
                                 <p className="text-black py-8 text-md xl:text-lg font-normal">
                                     Empowering Communities. Transforming Systems. To build a world where spiritual leadership, innovation, and enterprise work together
                                 </p>
-                                <Link href={'/partner'} className='cursor-pointer'>
+                                <Link href={'/partner#levels'} className='cursor-pointer'>
                                     <button
                                         className="bg-white py-2.5 px-6 text-black font-semibold text-md rounded-full hover:bg-opacity-90 transition cursor-pointer">
                                         Partner With us

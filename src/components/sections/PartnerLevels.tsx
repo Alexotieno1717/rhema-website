@@ -34,7 +34,7 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
     };
 
     const renderWelcome = () => (
-        <div className="text-center space-y-8">
+        <div id='levels' className="text-center space-y-8">
             <div className="space-y-4">
                 <h1 className="text-center text-[#1B3959] text-5xl font-black uppercase">
                     Join Our Partner Network
