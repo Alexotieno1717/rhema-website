@@ -3,7 +3,7 @@ import React from 'react';
 const ContactInfo = () => {
     return (
         <>
-            <div className="py-16 px-16">
+            <div className="py-16 px-6 lg:px-16">
                 <h1 className="text-lg font-semibold">For General Inquiries About JKM Kenya</h1>
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center space-x-8 space-y-4 lg:space-y-0">
                     <div>

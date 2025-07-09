@@ -19,7 +19,7 @@ export default function HeroSection({data}: HeroSectionProps) {
 
             {/* Content */}
             <div className="relative px-6 text-center">
-                <h1 className="text-2xl lg:text-6xl font-bold leading-snug mb-6 whitespace-pre-line">{data.title}</h1>
+                <h1 className="text-3xl lg:text-6xl font-bold leading-snug mb-6 whitespace-pre-line">{data.title}</h1>
             </div>
         </section>
     );
