@@ -40,14 +40,14 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
                 className="transition ease-in-out delay-150 w-full z-50"
             >
                 <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 py-2 lg:py-0 z-30">
-                    <Link href="/" className="flex items-center pl-6 xl:pl-12">
-                        {/*<img*/}
-                        {/*    src={'/assets/new_logo_2.png'}*/}
-                        {/*    alt="JKM"*/}
-                        {/*    className="w-full lg:w-[120px] lg:h-[120px] ml-0 lg:ml-40"*/}
-                        {/*    // className='w-[116px] h-[51px] xl:w-[238px] xl:h-[102px]'*/}
-                        {/*/>*/}
-                    </Link>
+                    {/*<Link href="/" className="flex items-center pl-6 xl:pl-12">*/}
+                    {/*    <img*/}
+                    {/*        src={'/assets/Kindom-Commonwealth-logo.png'}*/}
+                    {/*        alt="JKM"*/}
+                    {/*        className="w-full lg:w-[120px] lg:h-[120px] ml-0 lg:ml-40"*/}
+                    {/*        // className='w-[116px] h-[51px] xl:w-[238px] xl:h-[102px]'*/}
+                    {/*    />*/}
+                    {/*</Link>*/}
                     <div className="flex lg:order-2">
                         <div className='hidden lg:block pt-7 mr-5'>
                             <div className="space-y-4">

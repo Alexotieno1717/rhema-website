@@ -42,7 +42,7 @@ const Header = ({ colors = defaultValues }: HeaderProps) => {
                 <div className="flex flex-wrap items-center justify-between mx-auto">
                     <Link href="/" className="flex items-center pl-4 lg:pl-20">
                         <Image
-                            src={'/assets/new_logo_2.png'}
+                            src={'/assets/Kindom-Commonwealth-logo.png'}
                             alt="JKM"
                             width={68}
                             height={68}
