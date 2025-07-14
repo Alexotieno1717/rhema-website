@@ -221,7 +221,7 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                 <Button
                     className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer"
                     onClick={() => {
-                        router.push('/member')
+                        router.push(`/member?=${partnerType}&level=${partnerLevel}`)
                     }}
                 >
                     Complete Application

@@ -1,11 +1,12 @@
 "use client"
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Check, User, Users, FileCheck } from 'lucide-react';
 import ContactInfoStep from "@/components/sections/ContactInfoStep";
 import SpouseInfoStep from "@/components/sections/SpouseInfoStep";
 import ReviewStep from "@/components/sections/ReviewStep";
 import {Card, CardContent, CardHeader} from "@/components/ui/card";
 import {Progress} from "@/components/ui/progress";
+import { useSearchParams } from 'next/navigation';
 
 export interface ContactData {
     firstName: string;
@@ -61,6 +62,17 @@ const ContactStepper = () => {
         spousePhone: '',
     });
 
+    const searchParams = useSearchParams();
+    const [partnerType, setPartnerType] = useState<string | null>(null);
+    const [partnerLevel, setPartnerLevel] = useState<string | null>(null);
+
+    useEffect(() => {
+        const type = searchParams.get('type');
+        const level = searchParams.get('level');
+        setPartnerType(type);
+        setPartnerLevel(level);
+    }, [searchParams]);
+
     const steps = [
         { number: 1, title: 'Contact Information', icon: User },
         { number: 2, title: 'Spouse Information', icon: Users, conditional: true },
@@ -100,10 +112,44 @@ const ContactStepper = () => {
         }
     };
 
-    const handleSubmit = () => {
-        console.log('Form submitted:', { contactData, spouseData });
-        alert('Form submitted successfully!');
+    const handleSubmit = async () => {
+        console.log('Submitting partnerType and partnerLevel:', partnerType, partnerLevel);
+
+        try {
+            const response = await fetch('/api/partners', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    first_name: contactData.firstName,
+                    last_name: contactData.lastName,
+                    email: contactData.email,
+                    phone: contactData.phone,
+                    address_1: contactData.address1,
+                    address_2: contactData.address2,
+                    city: contactData.city,
+                    state: contactData.state,
+                    country: contactData.country,
+                    date_of_birth: contactData.dateOfBirth,
+                    spouse_first_name: contactData.includeSpouse ? contactData.firstName : '',
+                    spouse_last_name: contactData.includeSpouse ? spouseData.spouseLastName : '',
+                    spouse_email: contactData.includeSpouse ? spouseData.spouseEmail : '',
+                    spouse_phone: contactData.includeSpouse ? spouseData.spousePhone : '',
+                }),
+            });
+
+            if (!response.ok) throw new Error('Something went wrong');
+
+            const data = await response.json();
+            alert('Form submitted successfully!');
+            console.log('Submission response:', data);
+        } catch (error) {
+            console.error('Submission error:', error);
+            alert('Failed to submit form. Please try again.');
+        }
     };
+
 
     const renderStep = () => {
         switch (currentStep) {
