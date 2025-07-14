@@ -6,7 +6,8 @@ import SpouseInfoStep from "@/components/sections/SpouseInfoStep";
 import ReviewStep from "@/components/sections/ReviewStep";
 import {Card, CardContent, CardHeader} from "@/components/ui/card";
 import {Progress} from "@/components/ui/progress";
-import { useSearchParams } from 'next/navigation';
+import {useRouter, useSearchParams} from 'next/navigation';
+import { toast } from "sonner"
 
 export interface ContactData {
     firstName: string;
@@ -61,6 +62,8 @@ const ContactStepper = () => {
         spouseOrganization: '',
         spousePhone: '',
     });
+
+    const router = useRouter();
 
     const searchParams = useSearchParams();
     const [partnerType, setPartnerType] = useState<string | null>(null);
@@ -142,11 +145,12 @@ const ContactStepper = () => {
             if (!response.ok) throw new Error('Something went wrong');
 
             const data = await response.json();
-            alert('Form submitted successfully!');
             console.log('Submission response:', data);
+            toast.success("Partner has been created successfully.")
+            router.push('/partner');
         } catch (error) {
             console.error('Submission error:', error);
-            alert('Failed to submit form. Please try again.');
+            toast.success("Failed to submit form. Please try again.")
         }
     };
 
