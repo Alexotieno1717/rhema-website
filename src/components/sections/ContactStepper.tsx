@@ -162,11 +162,11 @@ const ContactStepper = () => {
 
             const data = await response.json();
             console.log('Submission response:', data);
-            toast.success("Partner has been created successfully.")
+            toast.success(data.status_message || 'Partner created successfully.')
             router.push('/partner');
         } catch (error) {
             console.error('Submission error:', error);
-            toast.error("Failed to submit form. Please try again.")
+            toast.error("The Credentials provided has already been taken.")
         }
     };
 

@@ -118,7 +118,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ contactData, spouseData, onPrev
                 <Button
                     onClick={onPrevious}
                     variant="outline"
-                    className="px-6 py-2 border-gray-300 hover:bg-gray-50 transition-colors duration-200"
+                    className="px-6 py-2 border-gray-300 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
                 >
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Previous
@@ -126,7 +126,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ contactData, spouseData, onPrev
 
                 <Button
                     onClick={onSubmit}
-                    className="px-8 py-2 bg-green-600 hover:bg-green-700 transition-colors duration-200"
+                    className="px-8 py-2 bg-green-600 hover:bg-green-700 transition-colors duration-200 cursor-pointer"
                 >
                     <Send className="w-4 h-4 mr-2" />
                     Submit Details

@@ -171,7 +171,7 @@ const ContactInfoStep: React.FC<ContactInfoStepProps> = ({ data, onChange, onNex
                 <Button
                     onClick={onNext}
                     disabled={!isFormValid()}
-                    className="px-8 py-2 bg-[#C79D38] hover:bg-[#8D5B00] cursor-pointer transition-colors duration-200"
+                    className="px-8 py-2 bg-[#C79D38] hover:bg-[#8D5B00] cursor-pointer transition-colors duration-200 cursor-pointer"
                 >
                     Next Step
                 </Button>

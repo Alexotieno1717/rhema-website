@@ -143,7 +143,7 @@ const SpouseInfoStep: React.FC<SpouseInfoStepProps> = ({ data, onChange, onNext,
                 <Button
                     onClick={onPrevious}
                     variant="outline"
-                    className="px-6 py-2 border-gray-300 hover:bg-gray-50 transition-colors duration-200"
+                    className="px-6 py-2 border-gray-300 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
                 >
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Previous
@@ -152,7 +152,7 @@ const SpouseInfoStep: React.FC<SpouseInfoStepProps> = ({ data, onChange, onNext,
                 <Button
                     onClick={onNext}
                     disabled={!isFormValid()}
-                    className="px-8 py-2 bg-[#C79D38] hover:bg-[#8D5B00] cursor-pointer transition-colors duration-200"
+                    className="px-8 py-2 bg-[#C79D38] hover:bg-[#8D5B00] cursor-pointer transition-colors duration-200 cursor-pointer"
                 >
                     Next Step
                 </Button>
