@@ -166,7 +166,7 @@ const ContactStepper = () => {
             router.push('/partner');
         } catch (error) {
             console.error('Submission error:', error);
-            toast.success("Failed to submit form. Please try again.")
+            toast.error("Failed to submit form. Please try again.")
         }
     };
 
