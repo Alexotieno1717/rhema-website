@@ -35,6 +35,19 @@ export interface SpouseData {
     spousePhone: string;
 }
 
+const getBandIdFromSlug = (slug: string | null): number | null => {
+    switch (slug) {
+        case 'gold':
+            return 1;
+        case 'silver':
+            return 2;
+        case 'platinum':
+            return 3;
+        default:
+            return null;
+    }
+};
+
 const ContactStepper = () => {
     const [currentStep, setCurrentStep] = useState(1);
     const [contactData, setContactData] = useState<ContactData>({
@@ -139,6 +152,9 @@ const ContactStepper = () => {
                     spouse_last_name: contactData.includeSpouse ? spouseData.spouseLastName : '',
                     spouse_email: contactData.includeSpouse ? spouseData.spouseEmail : '',
                     spouse_phone: contactData.includeSpouse ? spouseData.spousePhone : '',
+
+                    type: partnerType, // 👈 NEW: Add partnership type
+                    band_id: getBandIdFromSlug(partnerLevel), // 👈 NEW: Add band_id from level
                 }),
             });
 

@@ -8,7 +8,7 @@ export async function POST(req: Request) {
         const {
             first_name, last_name, email, phone,
             address_1, address_2, city, state, country, date_of_birth,
-            spouse_first_name, spouse_last_name, spouse_email, spouse_phone,
+            spouse_first_name, spouse_last_name, spouse_email, spouse_phone, type, band_id
         } = body;
 
         const response = await axios.post('https://jkm-backend-main-xbnyr9.laravel.cloud/api/partners', null, {
@@ -23,8 +23,8 @@ export async function POST(req: Request) {
                 state,
                 country,
                 date_of_birth,
-                type: 'individual',
-                band_id: 2,
+                type,
+                band_id,
                 spouse_first_name,
                 spouse_last_name,
                 spouse_email,
