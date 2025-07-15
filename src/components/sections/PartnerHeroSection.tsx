@@ -1,6 +1,6 @@
 import React from 'react';
-import PartnerBriefSlider from "@/components/sections/PartnerBriefSlider";
-import {PartnersSliderContent} from "@/mock";
+// import PartnerBriefSlider from "@/components/sections/PartnerBriefSlider";
+// import {PartnersSliderContent} from "@/mock";
 import {IPartners} from "@/types";
 
 interface PartnerHeroSectionProps {

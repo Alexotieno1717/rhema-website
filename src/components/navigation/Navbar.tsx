@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from "next/link";
 import {Nav, StyledList, StyledListLinkSecondary} from "@/components/ui/ComponentsStyled";
-import {ChevronDownIcon, FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon} from 'lucide-react';
+import {ChevronDownIcon, FacebookIcon, InstagramIcon, YoutubeIcon} from 'lucide-react';
 import { Links } from '@/constants';
 import {usePathname} from "next/navigation";
 

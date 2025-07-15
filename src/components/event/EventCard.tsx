@@ -1,13 +1,13 @@
 // components/EventCard.tsx
-import { Calendar } from 'lucide-react';
+// import { Calendar } from 'lucide-react';
 
 type EventCardProps = {
     title: string;
-    date: string;
+    // date: string;
     image: string;
 };
 
-export default function EventCard({ title, date, image }: EventCardProps) {
+export default function EventCard({ title, image }: EventCardProps) {
     return (
         <div className="bg-white rounded-xl overflow-hidden shadow-md border">
             <img src={image} alt={title} className="w-full object-cover" />
