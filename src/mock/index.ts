@@ -282,30 +282,8 @@ const EventsContent: IEvents ={
             date: '8th–15th June 2025',
             image: '/assets/event4.png',
         },
-        {
-            id: "5",
-            title: '7 Days of Worship',
-            date: '8th–15th June 2025',
-            image: '/assets/event1.png',
-        },
-        {
-            id: "6",
-            title: '7 Days of Worship',
-            date: '8th–15th June 2025',
-            image: '/assets/event1.png',
-        },
-        {
-            id: "7",
-            title: '7 Days of Worship',
-            date: '8th–15th June 2025',
-            image: '/assets/event1.png',
-        },
-        {
-            id: "8",
-            title: '7 Days of Worship',
-            date: '8th–15th June 2025',
-            image: '/assets/event1.png',
-        },
+ 
+    
     ]
 }
 

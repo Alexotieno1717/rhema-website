@@ -6,10 +6,11 @@ import React from "react";
 
 export default function Home() {
     return (
-        <div>
-            <main className="relative overflow-visible">
+        <div className="min-h-screen flex flex-col">
+            <main className="flex-1 relative overflow-visible">
                 <div
-                    className="relative pb-20 lg:pb-48 z-10 max-h-[150vh] md:max-h-[150vh] lg:max-h-[90vh] px-2 lg:px-0"
+                    className="relative min-h-screen pt-20 pb-4 md:pb-6 z-10 px-2 lg:px-0 flex flex-col"
+                    
                     style={{
                         background: 'linear-gradient(to right, #FFEA8E, #D3A84B)',
                     }}
@@ -22,10 +23,11 @@ export default function Home() {
 
                     {/* Navbar */}
                     <Navbar/>
+                    {/* Padding for fixed navbar is now handled by pt-20 above */}
 
-                    <div className="flex flex-col items-center lg:items-start lg:flex-row pt-10 lg:pt-0">
-                        <div>
-                            <img src="/assets/Rev_Julian-Kyula.png" className="pt-0 lg:pt-10" alt="Rev Julian"/>
+                    <div className="flex flex-col items-center lg:flex-row pt-10 lg:pt-0">
+                        <div className="flex lg:items-end">
+                            <img src="/assets/Rev_Julian-Kyula.png" className="pt-0" alt="Rev Julian"/>
                         </div>
                         <div>
                             <div className="text-center lg:text-left lg:w-3xl">
@@ -39,7 +41,7 @@ export default function Home() {
                                     <div className="border border-r border-black"></div>
                                     <h1>market place </h1>
                                 </div>
-                                <p className="text-black py-8 text-md xl:text-lg font-normal">
+                                <p className="text-black mt-6 py-8 text-md xl:text-lg font-normal">
                                     Empowering Communities. Transforming Systems. To build a world where spiritual leadership, innovation, and enterprise work together
                                 </p>
                                 <Link href={'/partner#levels'} className='cursor-pointer'>

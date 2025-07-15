@@ -17,7 +17,7 @@ const Page = () => {
             <AboutMission item={AboutPageContent} />
             <AboutImpact item={AboutPageContent} />  
             <HeroSection data={HeroSectionContent} />
-            <LatestNews data={LatestNewsContent} />
+            {/* <LatestNews data={LatestNewsContent} /> */}
             <ContactInfo />
             <Footer />
         </>

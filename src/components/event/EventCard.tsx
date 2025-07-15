@@ -13,13 +13,13 @@ export default function EventCard({ title, date, image }: EventCardProps) {
             <img src={image} alt={title} className="w-full object-cover" />
             <div className="p-4">
                 <h3 className="text-lg font-semibold">{title}</h3>
-                <div className="flex items-center text-sm text-gray-600 mt-2 mb-4">
+                {/* <div className="flex items-center text-sm text-gray-600 mt-2 mb-4">
                     <Calendar className="w-4 h-4 mr-2" />
                     {date}
                 </div>
                 <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded">
                     View
-                </button>
+                </button> */}
             </div>
         </div>
     );
