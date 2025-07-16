@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 
 type Step = 'welcome' | 'type' | 'level' | 'details';
 type PartnerType = 'individual' | 'corporate' | null;
-type PartnerLevel = 'gold' | 'silver' | 'platinum' | null;
+type PartnerLevel = 'gold' | 'silver' | 'platinum' | 'Individual 1' | 'Individual 2' | 'Individual 3' | null;
 
 interface PartnersLevelsProps {
     data: IPartners
@@ -131,53 +131,57 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
         </div>
     );
 
-    const renderLevelSelection = () => (
-        <div className="space-y-8">
-            <div className="text-center space-y-4">
-                <h2 className="text-3xl font-bold text-gray-900">Select Your Partner Level</h2>
-                <p className="text-gray-600">Choose the partnership tier that matches your goals</p>
-            </div>
-
-            <div className=''>
-                {/*<h1 className='pt-24 pb-[24px] text-center text-[#1B3959] text-5xl font-black uppercase'>{data.levels.title}</h1>*/}
-                {/*<p className='text-center pb-8' >{data.levels.description}</p>*/}
-
-                <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-                    {data.levels.data.map((item, i) => (
-                        <Card
-                            className={`cursor-pointer transition-all duration-200 hover:shadow-lg border-2 flex flex-col bg-white shadow-lg py-10 px-8 items-center text-center space-y-4 ${
-                                partnerLevel === item.slug
-                                    ? 'border-gray-500 bg-gray-50 shadow-lg'
-                                    : 'border-gray-200 hover:border-gray-400'
-                            }`}
-                            onClick={() => setPartnerLevel(item.slug)}
-                            key={i}
-                        >
-                            <img src={item.image} className='' alt="brown"/>
-                            <p className='text-center text-md text-[#475467]'>{item.description}</p>
-                            {/*<button className='py-3 px-[152px] bg-[#1B3959] rounded-[8px] text-white'>{item.buttonText}</button>*/}
-                        </Card>
-                    ))}
-
+    const renderLevelSelection = () => {
+        const levelsData = partnerType === 'individual' ? data.levels.data.individual : data.levels.data.corporate;
+    
+        return (
+            <div className="space-y-8">
+                <div className="text-center space-y-4">
+                    <h2 className="text-3xl font-bold text-gray-900">Select Your Partner Level</h2>
+                    <p className="text-gray-600">
+                        Choose the partnership tier that matches your goals
+                    </p>
+                </div>
+    
+                <div className=''>
+                    {/* Render levels based on partner type */}
+                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+                        {levelsData.map((item, i) => (
+                            <Card
+                                className={`cursor-pointer transition-all duration-200 hover:shadow-lg border-2 flex flex-col bg-white shadow-lg py-10 px-8 items-center text-center space-y-4 ${
+                                    partnerLevel === item.slug
+                                        ? 'border-gray-500 bg-gray-50 shadow-lg'
+                                        : 'border-gray-200 hover:border-gray-400'
+                                }`}
+                                onClick={() => setPartnerLevel(item.slug)}
+                                key={i}
+                            >
+                                <h1>{item.slug}</h1>
+                                <p className='text-center text-md text-[#475467]'>{item.description}</p>
+                                {/* Add other content dynamically if needed */}
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+    
+                <div className="flex justify-between">
+                    <Button variant="outline" onClick={prevStep}>
+                        <ArrowLeft className="mr-2 h-4 w-4" />
+                        Back
+                    </Button>
+                    <Button
+                        onClick={nextStep}
+                        disabled={!partnerLevel}
+                        className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer"
+                    >
+                        Continue
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
                 </div>
             </div>
-
-            <div className="flex justify-between">
-                <Button variant="outline" onClick={prevStep}>
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Back
-                </Button>
-                <Button
-                    onClick={nextStep}
-                    disabled={!partnerLevel}
-                    className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer"
-                >
-                    Continue
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-            </div>
-        </div>
-    );
+        );
+    };
+    
 
     const renderDetails = () => (
         <div className="space-y-8">

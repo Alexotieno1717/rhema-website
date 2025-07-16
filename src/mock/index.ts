@@ -214,29 +214,54 @@ const PartnerContent: IPartners ={
     levels:{
         title: "PARTNER LEVELS",
         description: "How to partner with us",
-        data: [
-            {
+        data: {
+            individual: [
+              {
+                id: "1",
+                slug: "Individual 1",
+                image: "",
+                description: "Individual 1 1.6M ",
+                buttonText: "Get Started"
+              },
+              {
+                id: "2",
+                slug: "Individual 2",
+                image: "",
+                description: "Individual 2. 7.5M",
+                buttonText: "Get Started"
+              },
+              {
+                id: "3",
+                slug: "Individual 3",
+                image: "",
+                description: "Individual 8.4T.",
+                buttonText: "Get Started"
+              }
+            ],
+            corporate: [
+              {
                 id: "1",
                 slug: "silver",
-                image: "/assets/brown.png",
-                description: "If your auto debit gift is at least $40/month, you will be considered an Aaron’s Army Partner. You can also submit an immediate one-time advanced gift of $400 to qualify for Aaron’s Army.",
+                image: "",
+                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
                 buttonText: "Get Started"
-            },
-            {
+              },
+              {
                 id: "2",
                 slug: "gold",
-                image: "/assets/silver.png",
-                description: "If your auto debit gift is at least $40/month, you will be considered an Aaron’s Army Partner. You can also submit an immediate one-time advanced gift of $400 to qualify for Aaron’s Army.",
+                image: "",
+                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
                 buttonText: "Get Started"
-            },
-            {
+              },
+              {
                 id: "3",
                 slug: "platinum",
-                image: "/assets/gold.png",
-                description: "If your auto debit gift is at least $40/month, you will be considered an Aaron’s Army Partner. You can also submit an immediate one-time advanced gift of $400 to qualify for Aaron’s Army.",
+                image: "",
+                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
                 buttonText: "Get Started"
-            }
-        ]
+              }
+            ]
+          }
     },
     quote: `
     "God doesn’t call the qualified; He qualifies the called." — often attributed to various pastors and Christian leaders.

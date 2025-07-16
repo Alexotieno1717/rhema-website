@@ -85,7 +85,7 @@ export type impactCard ={
     title: string;
     description: string;
 }
-export type PartnerLevel = 'silver' | 'gold' | 'platinum';
+export type PartnerLevel = 'silver' | 'gold' | 'platinum' | 'Individual 1' | 'Individual 2' | 'Individual 3';
 
 export type levels ={
     id: string;
@@ -117,7 +117,10 @@ export interface IPartners {
     levels: {
         title: string;
         description: string;
-        data: Array<levels>;
+        data: {
+            individual: Array<levels>;
+            corporate: Array<levels>;
+        };
     };
     quote: string;
     image: string;
