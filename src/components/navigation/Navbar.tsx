@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from "next/link";
 import {Nav, StyledList, StyledListLinkSecondary} from "@/components/ui/ComponentsStyled";
-import {ChevronDownIcon, FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon} from 'lucide-react';
+import {ChevronDownIcon, FacebookIcon, InstagramIcon, YoutubeIcon} from 'lucide-react';
 import { Links } from '@/constants';
 import {usePathname} from "next/navigation";
 
@@ -21,9 +21,9 @@ const defaultValues = {
 };
 
 const socialLinks = [
-    { href: "https://facebook.com", icon: <FacebookIcon className="w-7 h-7" /> },
-    { href: "https://instagram.com", icon: <InstagramIcon className="w-7 h-7" /> },
-    { href: "https://twitter.com", icon: <TwitterIcon className="w-7 h-7" /> },
+    { href: "https://www.facebook.com/juliankyula", icon: <FacebookIcon className="w-7 h-7" /> },
+    { href: "https://www.instagram.com/jkyula", icon: <InstagramIcon className="w-7 h-7" /> },
+    // { href: "https://twitter.com", icon: <TwitterIcon className="w-7 h-7" /> },
     { href: "https://youtube.com", icon: <YoutubeIcon className="w-7 h-7" /> },
 ];
 
@@ -37,9 +37,9 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
         <>
             <Nav
                 $collapsed={collapsed}
-                className="transition ease-in-out delay-150 w-full z-50"
+                className="fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out w-full z-[100] bg-white"
             >
-                <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 py-2 lg:py-0 z-30">
+                <div className="flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 py-4 z-30">
                     {/*<Link href="/" className="flex items-center pl-6 xl:pl-12">*/}
                     {/*    <img*/}
                     {/*        src={'/assets/Kindom-Commonwealth-logo.png'}*/}
@@ -50,12 +50,12 @@ const Navbar = ({ colors = defaultValues }: HeaderProps) => {
                     {/*</Link>*/}
                     <div className="flex lg:order-2">
                         <div className='hidden lg:block pt-7 mr-5'>
-                            <div className="space-y-4">
+                            <div className="flex flex-row space-x-4">
                                 {socialLinks.map(({ href, icon }, index) => (
                                     <Link
                                         key={index}
                                         href={href}
-                                        className="text-black hover:text-white duration-300 block"
+                                        className="text-black hover:text-white duration-300 inline-flex"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >

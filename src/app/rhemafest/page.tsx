@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from "@/components/navigation/Header";
 import Speakers from "@/components/rhema/Speakers";
-import DaysSection from "@/components/rhema/DaysSection";
-import LatestNews from "@/components/rhema/LatestNews";
+// import DaysSection from "@/components/rhema/DaysSection";
+// import LatestNews from "@/components/rhema/LatestNews";
 import Footer from "@/components/ui/Footer";
 import RhemaInfo from "@/components/rhema/RhemaInfo";
-import {LatestNewsContent, RhemaFeastContent} from "@/mock";
+// import {LatestNewsContent, RhemaFeastContent} from "@/mock";
+import {RhemaFeastContent} from "@/mock";
 import RhemaBannerSection from "@/components/rhema/RhemaBannerSection";
 
 const Page = () => {
@@ -41,8 +42,8 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            <DaysSection data={RhemaFeastContent} />
-            <LatestNews data={LatestNewsContent} />
+            {/* <DaysSection data={RhemaFeastContent} />
+            <LatestNews data={LatestNewsContent} /> */}
             <Footer />
 
         </div>

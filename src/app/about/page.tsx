@@ -4,9 +4,10 @@ import AboutBanner from "@/components/about/AboutBanner";
 import AboutMission from "@/components/about/AboutMission";
 import AboutImpact from "@/components/about/AboutImpact";
 import HeroSection from "@/components/rhema/HeroSection";
-import LatestNews from "@/components/rhema/LatestNews";
+// import LatestNews from "@/components/rhema/LatestNews";
 import Footer from "@/components/ui/Footer";
-import {AboutPageContent, HeroSectionContent, LatestNewsContent} from "@/mock";
+// import {AboutPageContent, HeroSectionContent, LatestNewsContent} from "@/mock";
+import {AboutPageContent, HeroSectionContent} from "@/mock";
 import ContactInfo from "@/components/sections/ContactInfo";
 
 const Page = () => {
@@ -17,7 +18,7 @@ const Page = () => {
             <AboutMission item={AboutPageContent} />
             <AboutImpact item={AboutPageContent} />  
             <HeroSection data={HeroSectionContent} />
-            <LatestNews data={LatestNewsContent} />
+            {/* <LatestNews data={LatestNewsContent} /> */}
             <ContactInfo />
             <Footer />
         </>
