@@ -119,34 +119,55 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                 </Card>
 
                 <Card
-                    className={`cursor-pointer transition-all duration-200 hover:shadow-lg border-2 ${
+                    className={`bg-black text-white cursor-pointer transition-all duration-200 rounded-2xl p-6 border-2 ${
                         partnerType === 'corporate'
-                            ? 'border-purple-500 bg-purple-50 shadow-lg'
-                            : 'border-gray-200 hover:border-purple-300'
+                        ? 'border-yellow-400 shadow-yellow-500/30 shadow-lg'
+                        : 'border-gray-700 hover:border-yellow-400'
                     }`}
                     onClick={() => {
                         if (partnerType !== 'corporate') {
-                            setPartnerType('corporate');
-                            nextStep();
+                        setPartnerType('corporate');
+                        nextStep();
                         }
                     }}
-                >
-                    <CardHeader className="text-center pb-4">
-                        <Users className="h-16 w-16 text-purple-600 mx-auto mb-4" />
-                        <CardTitle className="text-2xl">Corporate Partner</CardTitle>
-                        <CardDescription className="text-base">
-                            Ideal for companies, agencies, and organizations
+                    >
+                    <CardHeader className="text-center pb-6">
+                        <Users className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
+                        <CardTitle className="text-3xl font-serif text-yellow-300">Investment Summary</CardTitle>
+                        <CardDescription className="text-sm text-gray-400 mt-2">
+                        Tailored for visionary corporate partners
                         </CardDescription>
                     </CardHeader>
-                    <CardContent>
-                        <ul className="space-y-2 text-center text-sm text-gray-600">
-                            <li>Enterprise partnership agreement</li>
-                            <li>Team-based support and training</li>
-                            <li>Volume-based benefits</li>
-                            <li>Dedicated account management</li>
-                        </ul>
+                    <CardContent className="mt-6 space-y-6 text-center font-serif">
+                        <div>
+                        <p className="text-3xl text-white">15M+</p>
+                        <p className="text-lg text-yellow-200 mt-1">Diamond</p>
+                        <p className="text-sm text-gray-400">Premium co-branding rights</p>
+                        </div>
+                        <div>
+                        <p className="text-3xl text-white">10M+</p>
+                        <p className="text-lg text-yellow-200 mt-1">Platinum</p>
+                        <p className="text-sm text-gray-400">Enhanced visibility package</p>
+                        </div>
+                        <div>
+                        <p className="text-3xl text-white">5M+</p>
+                        <p className="text-lg text-yellow-200 mt-1">Gold</p>
+                        <p className="text-sm text-gray-400">Key speaking opportunities</p>
+                        </div>
+                        <div>
+                        <p className="text-3xl text-white">2.5M+</p>
+                        <p className="text-lg text-yellow-200 mt-1">Silver</p>
+                        <p className="text-sm text-gray-400">Targeted brand exposure</p>
+                        </div>
+                        <div>
+                        <p className="text-3xl text-white">1M+</p>
+                        <p className="text-lg text-yellow-200 mt-1">Bronze</p>
+                        <p className="text-sm text-gray-400">Verbal Acknowledgement</p>
+                        </div>
                     </CardContent>
                 </Card>
+
+                
             </div>
 
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-1/4 mt-6 justify-center items-center mx-auto">
