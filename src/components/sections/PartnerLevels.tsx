@@ -39,6 +39,40 @@ const getLevelColors = (level: PartnerLevel) => {
   }
 };
 
+// Reusable button group for Back and Continue/Complete
+interface StepButtonsProps {
+  onBack: () => void;
+  onContinue?: () => void;
+  continueDisabled?: boolean;
+  continueLabel?: string;
+  showContinue?: boolean;
+}
+
+const StepButtons = ({ onBack, onContinue, continueDisabled, continueLabel = 'Continue', showContinue = true }: StepButtonsProps) => (
+  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-1/4 mt-6 justify-center items-center mx-auto">
+    <Button
+      variant="outline"
+      onClick={onBack}
+      className="cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
+      size="default"
+    >
+      <ArrowLeft className="mr-2 h-4 w-4" />
+      Back
+    </Button>
+    {showContinue && (
+      <Button
+        onClick={onContinue}
+        disabled={continueDisabled}
+        className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
+        size="default"
+      >
+        {continueLabel}
+        <ArrowRight className="ml-2 h-4 w-4" />
+      </Button>
+    )}
+  </div>
+);
+
 const PartnerLevels = ({data}: PartnersLevelsProps) => {
     const [currentStep, setCurrentStep] = useState<Step>('welcome');
     const [partnerType, setPartnerType] = useState<PartnerType>(null);
@@ -186,26 +220,7 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                 
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-1/4 mt-6 justify-center items-center mx-auto">
-                <Button
-                    variant="outline"
-                    onClick={prevStep}
-                    className="cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
-                    size="default"
-                >
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Back
-                </Button>
-                <Button
-                    onClick={nextStep}
-                    disabled={!partnerType}
-                    className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
-                    size="default"
-                >
-                    Continue
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-            </div>
+            <StepButtons onBack={prevStep} onContinue={nextStep} continueDisabled={!partnerType} />
         </div>
     );
 
@@ -275,26 +290,7 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
     
 
 
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-1/4 mt-6 justify-center items-center mx-auto">
-                    <Button
-                        variant="outline"
-                        onClick={prevStep}
-                        className="cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
-                        size="default"
-                    >
-                        <ArrowLeft className="mr-2 h-4 w-4" />
-                        Back
-                    </Button>
-                    <Button
-                        onClick={nextStep}
-                        disabled={!partnerLevel}
-                        className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
-                        size="default"
-                    >
-                        Continue
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                </div>
+                <StepButtons onBack={prevStep} onContinue={nextStep} continueDisabled={!partnerLevel} />
             </div>
         );
     };
@@ -334,32 +330,14 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
             </div>
 
 
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-1/4 mt-6 justify-center items-center mx-auto">
-               
-            
+            <StepButtons
+                onBack={prevStep}
+                onContinue={() => router.push(`/member?type=${partnerType}&level=${partnerLevel}`)}
+                continueLabel="Complete Application"
+                continueDisabled={false}
+            />
 
-                    <Button
-                        variant="outline"
-                        onClick={prevStep}
-                        className="cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
-                        size="default"
-                    >
-                        <ArrowLeft className="mr-2 h-4 w-4" />
-                        Back
-                    </Button>
-                
-                <Button
-                    className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer"
-                    onClick={() => {
-                        router.push(`/member?type=${partnerType}&level=${partnerLevel}`)
-                    }}
-                >
-                    Complete Application
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-            </div>
-
-           
+        
 
 
         </div>
