@@ -123,11 +123,11 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
 
             <div className="grid md:grid-cols-2 gap-6">
                 <Card
-                    className={`bg-gradient-to-br from-[#f8f5f0] to-[#fffdf7] cursor-pointer transition-all duration-200 rounded-2xl p-6 border-2 shadow-md ${
+                    className={`bg-gradient-to-br from-[#f8f5f0] to-[#fffdf7] cursor-pointer transition-all duration-200 rounded-2xl p-4 border-2 shadow-md ${
                         partnerType === 'individual'
                         ? 'border-yellow-500 shadow-yellow-300/40 shadow-lg'
                         : 'border-gray-300 hover:border-yellow-500'
-                    } hover:shadow-[0_12px_48px_0_rgba(234,179,8,0.45)] transition-shadow`}
+                    } hover:shadow-[0_8px_32px_0_rgba(234,179,8,0.25)] transition-shadow min-h-0`}
                     onClick={() => {
                         if (partnerType !== 'individual') {
                         setPartnerType('individual');
@@ -135,45 +135,45 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                         }
                     }}
                     >
-                    <CardHeader className="text-center pb-6">
-                        <User className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
-                        <CardTitle className="text-3xl font-serif text-yellow-800">Individual Partner</CardTitle>
-                        <CardDescription className="text-sm text-gray-700 mt-2">
+                    <CardHeader className="text-center pb-4">
+                        <User className="h-10 w-10 text-yellow-600 mx-auto mb-2" />
+                        <CardTitle className="text-2xl font-serif text-yellow-800">Individual Partner</CardTitle>
+                        <CardDescription className="text-xs text-gray-700 mt-1">
                         Tailored for individuals and professionals seeking impact
                         </CardDescription>
                     </CardHeader>
 
-                    <CardContent className="mt-6 space-y-6 text-center font-serif text-gray-800">
+                    <CardContent className="mt-4 space-y-4 text-center font-serif text-gray-800">
                         <div>
-                        <p className="text-2xl text-yellow-700">KES 1K – 100K</p>
-                        <p className="text-lg mt-1">Faith Builder</p>
-                        <p className="text-sm text-gray-600">Support with purpose</p>
+                        <p className="text-lg text-yellow-700">KES 1K – 100K</p>
+                        <p className="text-base mt-0.5">Faith Builder</p>
+                        <p className="text-xs text-gray-600">Support with purpose</p>
                         </div>
                         <div>
-                        <p className="text-2xl text-yellow-700">KES 100K+ – 1M</p>
-                        <p className="text-lg mt-1">Hope Carrier</p>
-                        <p className="text-sm text-gray-600">Amplify impact and message</p>
+                        <p className="text-lg text-yellow-700">KES 100K+ – 1M</p>
+                        <p className="text-base mt-0.5">Hope Carrier</p>
+                        <p className="text-xs text-gray-600">Amplify impact and message</p>
                         </div>
                         <div>
-                        <p className="text-2xl text-yellow-700">KES 1M+ – 5M</p>
-                        <p className="text-lg mt-1">Light Bearer</p>
-                        <p className="text-sm text-gray-600">Champion deeper change</p>
+                        <p className="text-lg text-yellow-700">KES 1M+ – 5M</p>
+                        <p className="text-base mt-0.5">Light Bearer</p>
+                        <p className="text-xs text-gray-600">Champion deeper change</p>
                         </div>
                         <div>
-                        <p className="text-2xl text-yellow-700">KES 5M+</p>
-                        <p className="text-lg mt-1">Truth Ambassador</p>
-                        <p className="text-sm text-gray-600">Stand as a beacon of hope</p>
+                        <p className="text-lg text-yellow-700">KES 5M+</p>
+                        <p className="text-base mt-0.5">Truth Ambassador</p>
+                        <p className="text-xs text-gray-600">Stand as a beacon of hope</p>
                         </div>
                     </CardContent>
                 </Card>
 
 
                 <Card
-                    className={`bg-black text-white cursor-pointer transition-all duration-200 rounded-2xl p-6 border-2 shadow-md ${
+                    className={`bg-black text-white cursor-pointer transition-all duration-200 rounded-2xl p-4 border-2 shadow-md ${
                         partnerType === 'corporate'
                         ? 'border-yellow-400 shadow-yellow-500/30 shadow-lg'
                         : 'border-gray-700 hover:border-yellow-400'
-                    } hover:shadow-[0_12px_48px_0_rgba(234,179,8,0.45)] transition-shadow`}
+                    } hover:shadow-[0_8px_32px_0_rgba(234,179,8,0.25)] transition-shadow min-h-0`}
                     onClick={() => {
                         if (partnerType !== 'corporate') {
                         setPartnerType('corporate');
@@ -181,38 +181,38 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                         }
                     }}
                     >
-                    <CardHeader className="text-center pb-6">
-                        <Users className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
-                        <CardTitle className="text-3xl font-serif text-yellow-300">Investment Summary</CardTitle>
-                        <CardDescription className="text-sm text-gray-400 mt-2">
+                    <CardHeader className="text-center pb-4">
+                        <Users className="h-10 w-10 text-yellow-400 mx-auto mb-2" />
+                        <CardTitle className="text-2xl font-serif text-yellow-300">Investment Summary</CardTitle>
+                        <CardDescription className="text-xs text-gray-400 mt-1">
                         Tailored for visionary corporate partners
                         </CardDescription>
                     </CardHeader>
-                    <CardContent className="mt-6 space-y-6 text-center font-serif">
+                    <CardContent className="mt-4 space-y-4 text-center font-serif">
                         <div>
-                        <p className="text-3xl text-white">15M+</p>
-                        <p className="text-lg text-yellow-200 mt-1">Diamond</p>
-                        <p className="text-sm text-gray-400">Premium co-branding rights</p>
+                        <p className="text-xl text-white">15M+</p>
+                        <p className="text-base text-yellow-200 mt-0.5">Diamond</p>
+                        <p className="text-xs text-gray-400">Premium co-branding rights</p>
                         </div>
                         <div>
-                        <p className="text-3xl text-white">10M+</p>
-                        <p className="text-lg text-yellow-200 mt-1">Platinum</p>
-                        <p className="text-sm text-gray-400">Enhanced visibility package</p>
+                        <p className="text-xl text-white">10M+</p>
+                        <p className="text-base text-yellow-200 mt-0.5">Platinum</p>
+                        <p className="text-xs text-gray-400">Enhanced visibility package</p>
                         </div>
                         <div>
-                        <p className="text-3xl text-white">5M+</p>
-                        <p className="text-lg text-yellow-200 mt-1">Gold</p>
-                        <p className="text-sm text-gray-400">Key speaking opportunities</p>
+                        <p className="text-xl text-white">5M+</p>
+                        <p className="text-base text-yellow-200 mt-0.5">Gold</p>
+                        <p className="text-xs text-gray-400">Key speaking opportunities</p>
                         </div>
                         <div>
-                        <p className="text-3xl text-white">2.5M+</p>
-                        <p className="text-lg text-yellow-200 mt-1">Silver</p>
-                        <p className="text-sm text-gray-400">Targeted brand exposure</p>
+                        <p className="text-xl text-white">2.5M+</p>
+                        <p className="text-base text-yellow-200 mt-0.5">Silver</p>
+                        <p className="text-xs text-gray-400">Targeted brand exposure</p>
                         </div>
                         <div>
-                        <p className="text-3xl text-white">1M+</p>
-                        <p className="text-lg text-yellow-200 mt-1">Bronze</p>
-                        <p className="text-sm text-gray-400">Verbal Acknowledgement</p>
+                        <p className="text-xl text-white">1M+</p>
+                        <p className="text-base text-yellow-200 mt-0.5">Bronze</p>
+                        <p className="text-xs text-gray-400">Verbal Acknowledgement</p>
                         </div>
                     </CardContent>
                 </Card>
