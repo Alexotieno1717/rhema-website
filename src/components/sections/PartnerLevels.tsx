@@ -89,41 +89,57 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
 
             <div className="grid md:grid-cols-2 gap-6">
                 <Card
-                    className={`cursor-pointer transition-all duration-200 hover:shadow-lg border-2 ${
+                    className={`bg-gradient-to-br from-[#f8f5f0] to-[#fffdf7] cursor-pointer transition-all duration-200 rounded-2xl p-6 border-2 shadow-md ${
                         partnerType === 'individual'
-                            ? 'border-blue-500 bg-blue-50 shadow-lg'
-                            : 'border-gray-200 hover:border-blue-300'
-                    }`}
+                        ? 'border-yellow-500 shadow-yellow-300/40 shadow-lg'
+                        : 'border-gray-300 hover:border-yellow-500'
+                    } hover:shadow-[0_12px_48px_0_rgba(234,179,8,0.45)] transition-shadow`}
                     onClick={() => {
                         if (partnerType !== 'individual') {
-                            setPartnerType('individual');
-                            nextStep();
+                        setPartnerType('individual');
+                        nextStep();
                         }
                     }}
-                >
-                    <CardHeader className="text-center pb-4">
-                        <User className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                        <CardTitle className="text-2xl">Individual Partner</CardTitle>
-                        <CardDescription className="text-base">
-                            Perfect for freelancers, consultants, and individual professionals
+                    >
+                    <CardHeader className="text-center pb-6">
+                        <User className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
+                        <CardTitle className="text-3xl font-serif text-yellow-800">Individual Partner</CardTitle>
+                        <CardDescription className="text-sm text-gray-700 mt-2">
+                        Tailored for individuals and professionals seeking impact
                         </CardDescription>
                     </CardHeader>
-                    <CardContent>
-                        <ul className="space-y-2 text-center text-sm text-gray-600">
-                            <li> Personal partnership agreement</li>
-                            <li> Individual support and resources</li>
-                            <li> Flexible terms and conditions</li>
-                            <li> Direct communication channels</li>
-                        </ul>
+
+                    <CardContent className="mt-6 space-y-6 text-center font-serif text-gray-800">
+                        <div>
+                        <p className="text-2xl text-yellow-700">KES 1K – 100K</p>
+                        <p className="text-lg mt-1">Faith Builder</p>
+                        <p className="text-sm text-gray-600">Support with purpose</p>
+                        </div>
+                        <div>
+                        <p className="text-2xl text-yellow-700">KES 100K+ – 1M</p>
+                        <p className="text-lg mt-1">Hope Carrier</p>
+                        <p className="text-sm text-gray-600">Amplify impact and message</p>
+                        </div>
+                        <div>
+                        <p className="text-2xl text-yellow-700">KES 1M+ – 5M</p>
+                        <p className="text-lg mt-1">Light Bearer</p>
+                        <p className="text-sm text-gray-600">Champion deeper change</p>
+                        </div>
+                        <div>
+                        <p className="text-2xl text-yellow-700">KES 5M+</p>
+                        <p className="text-lg mt-1">Truth Ambassador</p>
+                        <p className="text-sm text-gray-600">Stand as a beacon of hope</p>
+                        </div>
                     </CardContent>
                 </Card>
 
+
                 <Card
-                    className={`bg-black text-white cursor-pointer transition-all duration-200 rounded-2xl p-6 border-2 ${
+                    className={`bg-black text-white cursor-pointer transition-all duration-200 rounded-2xl p-6 border-2 shadow-md ${
                         partnerType === 'corporate'
                         ? 'border-yellow-400 shadow-yellow-500/30 shadow-lg'
                         : 'border-gray-700 hover:border-yellow-400'
-                    }`}
+                    } hover:shadow-[0_12px_48px_0_rgba(234,179,8,0.45)] transition-shadow`}
                     onClick={() => {
                         if (partnerType !== 'corporate') {
                         setPartnerType('corporate');
@@ -210,11 +226,13 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                         {levelsData.map((item, i) => (
                             <Card
-                                className={`cursor-pointer transition-all duration-300 border-2 flex flex-col shadow-xl py-10 px-8 items-center text-center space-y-4 relative overflow-hidden ${
-                                    partnerLevel === item.slug
-                                        ? 'border-gray-500 bg-gray-50 shadow-2xl scale-105'
+                                className={`cursor-pointer transition-all duration-300 border-2 flex flex-col shadow-xl py-10 px-8 items-center text-center space-y-4 relative overflow-hidden
+                                    ${partnerLevel === item.slug
+                                        ? 'border-yellow-500 bg-yellow-50 shadow-2xl scale-105'
                                         : getLevelColors(item.slug as PartnerLevel)
-                                } hover:scale-105 hover:shadow-2xl hover:z-10`} // floating and animated
+                                    }
+                                    shadow-md hover:shadow-[0_12px_48px_0_rgba(234,179,8,0.45)] hover:border-yellow-500 hover:bg-yellow-200 hover:scale-110 hover:-translate-y-1 hover:z-20 focus-visible:ring-4 focus-visible:ring-yellow-400 transition-shadow
+                                `} // floating and animated
                                 style={{
                                     boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15), 0 1.5px 4px 0 rgba(0,0,0,0.10)',
                                     background: undefined,

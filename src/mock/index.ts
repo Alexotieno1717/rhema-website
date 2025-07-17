@@ -231,7 +231,7 @@ const PartnerContent: IPartners ={
                   image: "",
                   description: "Advancing hope with a reach of 7.5M — empowering communities and initiatives at scale.",
                   buttonText: "Get Started",
-                  amount: "KES 100K+  –  1M"
+                  amount: "KES 100K  –  1M"
                 },
                 {
                   id: "3",
@@ -239,7 +239,7 @@ const PartnerContent: IPartners ={
                   image: "",
                   description: "Major contributor tier. Help drive change with influence and visibility.",
                   buttonText: "Get Started",
-                  amount: "KES 1M+  –  5M"
+                  amount: "KES 1M  –  5M"
                 },
                 {
                   id: "4",
