@@ -21,7 +21,8 @@ const Page = () => {
                     {/* Left side - ruach image full height */}
                     <div className="h-full">
                         <img
-                            src="/assets/ruach.png"
+                            //src="/assets/ruach.png"
+                            src ="assets/rhema_feast_2025_recent.jpeg"
                             className="w-full h-full object-cover rounded-lg"
                             alt="youtube"
                         />
