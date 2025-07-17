@@ -3,12 +3,11 @@ import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, Users, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import {IPartners} from "@/types";
+import {IPartners, PartnerLevel} from "@/types";
 import { useRouter } from 'next/navigation';
 
 type Step = 'welcome' | 'type' | 'level' | 'details';
 type PartnerType = 'individual' | 'corporate' | null;
-type PartnerLevel = 'gold' | 'silver' | 'platinum' | 'Individual 1' | 'Individual 2' | 'Individual 3' | null;
 
 interface PartnersLevelsProps {
     data: IPartners
@@ -17,7 +16,7 @@ interface PartnersLevelsProps {
 const PartnerLevels = ({data}: PartnersLevelsProps) => {
     const [currentStep, setCurrentStep] = useState<Step>('welcome');
     const [partnerType, setPartnerType] = useState<PartnerType>(null);
-    const [partnerLevel, setPartnerLevel] = useState<PartnerLevel>(null);
+    const [partnerLevel, setPartnerLevel] = useState<PartnerLevel | null>(null);
 
     const router = useRouter();
 

@@ -85,7 +85,16 @@ export type impactCard ={
     title: string;
     description: string;
 }
-export type PartnerLevel = 'silver' | 'gold' | 'platinum' | 'Individual 1' | 'Individual 2' | 'Individual 3';
+export type PartnerLevel =
+  | 'Silver'
+  | 'Gold'
+  | 'Platinum'
+  | 'Diamond'
+  | 'Bronze'
+  | 'Faith Builder'
+  | 'Hope Carrier'
+  | 'Light Barrier'
+  | 'Truth Ambassador';
 
 export type levels ={
     id: string;
