@@ -13,6 +13,32 @@ interface PartnersLevelsProps {
     data: IPartners
 }
 
+const getLevelColors = (level: PartnerLevel) => {
+  switch (level) {
+    case 'Bronze':
+      return 'bg-gradient-to-br from-[#9a6b3f] to-[#f3e8dc] border-[#9a6b3f]';
+
+    case 'Silver':
+      return 'bg-gradient-to-br from-[#bfc1c2] to-[#e0e0e0] border-[#bfc1c2]'; // deeper silver
+    case 'Gold':
+      return 'bg-gradient-to-br from-[#d4af37] to-[#faf6e7] border-[#d4af37]'; // deeper gold
+    case 'Platinum':
+      return 'bg-gradient-to-br from-[#e5e4e2] to-[#b0b0b0] border-[#e5e4e2]'; // deeper platinum
+    case 'Diamond':
+      return 'bg-gradient-to-br from-[#b9f2ff] to-[#5bc6e8] border-[#5bc6e8]'; // deeper diamond
+    case 'Faith Builder':
+      return 'bg-gradient-to-br from-[#7c8db0] to-[#e0e4f7] border-[#7c8db0]'; // deeper blue-gray
+    case 'Hope Carrier':
+      return 'bg-gradient-to-br from-[#8db07c] to-[#e4f7e0] border-[#8db07c]'; // deeper green
+    case 'Light Barrier':
+      return 'bg-gradient-to-br from-[#b0b07c] to-[#f7f7e0] border-[#b0b07c]'; // deeper yellow-green
+    case 'Truth Ambassador':
+      return 'bg-gradient-to-br from-[#a37cb0] to-[#f0e0f7] border-[#a37cb0]'; // deeper purple
+    default:
+      return 'bg-white border-gray-200';
+  }
+};
+
 const PartnerLevels = ({data}: PartnersLevelsProps) => {
     const [currentStep, setCurrentStep] = useState<Step>('welcome');
     const [partnerType, setPartnerType] = useState<PartnerType>(null);
@@ -157,19 +183,25 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                         {levelsData.map((item, i) => (
                             <Card
-                                className={`cursor-pointer transition-all duration-200 hover:shadow-lg border-2 flex flex-col bg-white shadow-lg py-10 px-8 items-center text-center space-y-4 ${
+                                className={`cursor-pointer transition-all duration-300 border-2 flex flex-col shadow-xl py-10 px-8 items-center text-center space-y-4 relative overflow-hidden ${
                                     partnerLevel === item.slug
-                                        ? 'border-gray-500 bg-gray-50 shadow-lg'
-                                        : 'border-gray-200 hover:border-gray-400'
-                                }`}
+                                        ? 'border-gray-500 bg-gray-50 shadow-2xl scale-105'
+                                        : getLevelColors(item.slug as PartnerLevel)
+                                } hover:scale-105 hover:shadow-2xl hover:z-10`} // floating and animated
+                                style={{
+                                    boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15), 0 1.5px 4px 0 rgba(0,0,0,0.10)',
+                                    background: undefined,
+                                }}
                                 onClick={() => {
                                     if (partnerLevel !== item.slug) {
-                                        setPartnerLevel(item.slug);
+                                        setPartnerLevel(item.slug as PartnerLevel);
                                         nextStep();
                                     }
                                 }}
                                 key={i}
                             >
+                                {/* Glossy overlay */}
+                                <div className="absolute top-0 left-0 w-full h-full pointer-events-none" style={{background: 'linear-gradient(120deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.10) 60%, rgba(255,255,255,0.05) 100%)', borderRadius: 'inherit'}}></div>
                                 <h1>{item.slug}</h1>
                                 {
                                     Array.isArray(item.description) ? (
