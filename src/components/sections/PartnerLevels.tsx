@@ -183,7 +183,7 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                     >
                     <CardHeader className="text-center pb-4">
                         <Users className="h-10 w-10 text-yellow-400 mx-auto mb-2" />
-                        <CardTitle className="text-2xl font-serif text-yellow-300">Investment Summary</CardTitle>
+                        <CardTitle className="text-2xl font-serif text-yellow-300">Corporate Investment Summary</CardTitle>
                         <CardDescription className="text-xs text-gray-400 mt-1">
                         Tailored for visionary corporate partners
                         </CardDescription>
