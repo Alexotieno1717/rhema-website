@@ -171,7 +171,17 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                                 key={i}
                             >
                                 <h1>{item.slug}</h1>
-                                <p className='text-center text-md text-[#475467]'>{item.description}</p>
+                                {
+                                    Array.isArray(item.description) ? (
+                                        <ul className="text-center text-md text-[#475467] list-disc list-inside">
+                                        {item.description.map((desc: string, idx: number) => (
+                                            <li key={idx}>{desc}</li>
+                                        ))}
+                                        </ul>
+                                        ) : (
+                                            <p className='text-center text-md text-[#475467]'>{item.description}</p>
+                                        )
+                                    }
                                 {/* Add other content dynamically if needed */}
                             </Card>
                         ))}
@@ -204,12 +214,12 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                 <p className="text-gray-600">Review your selections and complete your partnership application</p>
             </div>
 
-            <Card className="border-2 border-green-200 bg-green-50">
-                <CardHeader>
-                    <CardTitle className="text-2xl text-green-800">Application Summary</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
+            <div className="flex justify-center">
+                <Card className="border-2 border-green-200 bg-green-50 max-w-sm w-full mx-auto">
+                    <CardHeader className="pb-2">
+                        <CardTitle className="text-2xl text-green-800">Application Summary</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-2">
                         <div>
                             <h4 className="font-semibold text-green-800">Partnership Type:</h4>
                             <p className="text-green-700 capitalize">{partnerType}</p>
@@ -218,18 +228,17 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                             <h4 className="font-semibold text-green-800">Partner Level:</h4>
                             <p className="text-green-700 capitalize">{partnerLevel}</p>
                         </div>
-                    </div>
-
-                    <div className="border-t border-green-200 pt-4">
-                        <h4 className="font-semibold text-green-800 mb-2">Next Steps:</h4>
-                        <ul className="space-y-1 text-sm text-green-700">
-                            <li>• Complete your partner application form</li>
-                            <li>• Submit required documentation</li>
-                            <li>• Receive partnership agreement</li>
-                        </ul>
-                    </div>
-                </CardContent>
-            </Card>
+                        <div className="border-t border-green-200 pt-4 mt-2">
+                            <h4 className="font-semibold text-green-800 mb-2">Next Steps:</h4>
+                            <ul className="space-y-1 text-sm text-green-700">
+                                <li>• Complete your partner application form</li>
+                                <li>• Submit required documentation</li>
+                                <li>• Receive partnership agreement</li>
+                            </ul>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
 
             <div className="flex justify-between">
                 <Button variant="outline" onClick={prevStep}>

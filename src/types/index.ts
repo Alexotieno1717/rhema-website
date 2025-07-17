@@ -99,7 +99,7 @@ export type PartnerLevel =
 export type levels ={
     id: string;
     image: string;
-    description: string;
+    description: string | string[];
     buttonText: string;
     slug: PartnerLevel;
 }

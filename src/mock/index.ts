@@ -228,7 +228,7 @@ const PartnerContent: IPartners ={
                 id: "2",
                 slug: "Hope Carrier",
                 image: "",
-                description: "Individual 2. 7.5M",
+                description: ["Individual 2. 7.5M","jkdajlajdoa"],
                 buttonText: "Get Started"
               },
               {
