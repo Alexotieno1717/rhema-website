@@ -93,7 +93,7 @@ export type PartnerLevel =
   | 'Bronze'
   | 'Faith Builder'
   | 'Hope Carrier'
-  | 'Light Barrier'
+  | 'Light Bearer'
   | 'Truth Ambassador';
 
 export type levels ={
@@ -102,6 +102,7 @@ export type levels ={
     description: string | string[];
     buttonText: string;
     slug: PartnerLevel;
+    amount?: string;
 }
 
 export interface IPartners {

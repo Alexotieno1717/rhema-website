@@ -217,72 +217,80 @@ const PartnerContent: IPartners ={
         description: "How to partner with us",
         data: {
             individual: [
-              {
-                id: "1",
-                slug: "Faith Builder",
-                image: "",
-                description: "Individual 1 1.6M ",
-                buttonText: "Get Started"
-              },
-              {
-                id: "2",
-                slug: "Hope Carrier",
-                image: "",
-                description: ["Individual 2. 7.5M","jkdajlajdoa"],
-                buttonText: "Get Started"
-              },
-              {
-                id: "3",
-                slug: "Light Barrier",
-                image: "",
-                description: "Individual 8.4T.",
-                buttonText: "Get Started"
-              },
-              {
-                id: "4",
-                slug: "Truth Ambassador",
-                image: "",
-                description: "Individual 8.4T.",
-                buttonText: "Get Started"
-              }
-
+                {
+                  id: "1",
+                  slug: "Faith Builder",
+                  image: "",
+                  description: "Supporter tier for emerging believers — foundational impact.",
+                  buttonText: "Get Started",
+                  amount: "KES 1,000  –  100K"
+                },
+                {
+                  id: "2",
+                  slug: "Hope Carrier",
+                  image: "",
+                  description: "Advancing hope with a reach of 7.5M — empowering communities and initiatives at scale.",
+                  buttonText: "Get Started",
+                  amount: "KES 100K+  –  1M"
+                },
+                {
+                  id: "3",
+                  slug: "Light Bearer",
+                  image: "",
+                  description: "Major contributor tier. Help drive change with influence and visibility.",
+                  buttonText: "Get Started",
+                  amount: "KES 1M+  –  5M"
+                },
+                {
+                  id: "4",
+                  slug: "Truth Ambassador",
+                  image: "",
+                  description: "Top-tier impact partner. Championing transformational projects.",
+                  buttonText: "Get Started",
+                  amount: "KES 5M+"
+                }
             ],
-
+            
             corporate: [
               {
                 id: "1",
                 slug: "Diamond",
                 image: "",
                 description: ["Co-Branding Opportunity", "Premium Stage Presence", "Business Forum Privileges", "VIP Benefits", "Verbal Mentions/Media Recognition", "Activation Zone", "Logo Placement"],
-                buttonText: "Get Started"
+                buttonText: "Get Started",
+                amount: "KES 15M+"
               },
               {
                 id: "2",
                 slug: "Platinum",
                 image: "",
                 description: ["LED screen logo visibility duringtransitions", "Panel slot at Business forum", "Premium activation booth sapace", "10 VIP passes", "Brand featuredin all materials", "Verbal mentions and acknowledgement in offcial program", "Logoon RhemaFeast2025 printed and digital event materials"],
-                buttonText: "Get Started"
+                buttonText: "Get Started",
+                amount: "KES 10M+"
               },
               {
                 id: "3",
                 slug: "Gold",
                 image: "",
                 description: ["Business Forum speaker slot", "Logo visibility during transitions", "Exhibitor zone booth", "5 VIP passes", "Media inclusion in recap video", "Speaking Opportunity at Business Forum (select session)", "Logo on Rhema Feast 2025 printed and digital event materials"],
-                buttonText: "Get Started"
+                buttonText: "Get Started",
+                amount: "KES 5M+"
               },
               {
                 id: "3",
                 slug: "Silver",
                 image: "",
                 description: ["Business Forum speaking opportunity", "Exhibition booth", "Program announcements mention", "3 VIP passes", "Logo in select digital platforms"],
-                buttonText: "Get Started"
+                buttonText: "Get Started",
+                amount: "KES 2.5+"
               },
               {
                 id: "3",
                 slug: "Bronze",
                 image: "",
                 description: ["Digital branding on select screens", "Verbal acknowledgment during event", "2 VIP invites", "Logo on event materials"],
-                buttonText: "Get Started"
+                buttonText: "Get Started",
+                amount: "KES 1M+"
               }
             ]
           }

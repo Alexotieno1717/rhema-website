@@ -30,7 +30,7 @@ const getLevelColors = (level: PartnerLevel) => {
       return 'bg-gradient-to-br from-[#7c8db0] to-[#e0e4f7] border-[#7c8db0]'; // deeper blue-gray
     case 'Hope Carrier':
       return 'bg-gradient-to-br from-[#8db07c] to-[#e4f7e0] border-[#8db07c]'; // deeper green
-    case 'Light Barrier':
+    case 'Light Bearer':
       return 'bg-gradient-to-br from-[#b0b07c] to-[#f7f7e0] border-[#b0b07c]'; // deeper yellow-green
     case 'Truth Ambassador':
       return 'bg-gradient-to-br from-[#a37cb0] to-[#f0e0f7] border-[#a37cb0]'; // deeper purple
@@ -204,10 +204,10 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none" style={{background: 'linear-gradient(120deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.10) 60%, rgba(255,255,255,0.05) 100%)', borderRadius: 'inherit'}}></div>
                                 <h1 className="font-extrabold text-xl md:text-2xl text-[#1B3959] mb-2 drop-shadow-sm tracking-wide">
                                     {item.slug}
-                                    {/* {item.amount && (
-                                        <span className="ml-2 font-bold text-lg text-[#b08d57]">{item.amount}</span>
-                                    )} */}
                                 </h1>
+                                {item.amount && (
+                                    <span className="block mt-0.5 mb-0.5 font-bold text-lg text-[#b08d57]">{item.amount}</span>
+                                )}
                                 {
                                     Array.isArray(item.description) ? (
                                         <ul className="flex flex-col items-center gap-2 mt-2 mb-2">
