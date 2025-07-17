@@ -24,14 +24,17 @@ const RhemaInfo = ({data}: RhemaInfoProps) => {
 
                     {/* Right: Countdown */}
                     <CountDown endDate="2025-09-01T00:00:00" />
+                    
+
                 </div>
+
             </div>
 
             {/* POSTER + STATS SECTION */}
             <div className="px-6 lg:px-26 pt-12 flex flex-col lg:flex-row gap-6 lg:gap-0">
                 {/* Poster Image */}
                 <div className="w-full lg:w-[50%]">
-                    <img src="/assets/rhema_poster.png" alt="rhema" className="w-full object-cover" />
+                    <img src="/assets/rhema_feast_2025_recent.jpeg" alt="rhema" className="w-full object-cover" />
                 </div>
 
                 {/* Stats Box */}
@@ -44,6 +47,7 @@ const RhemaInfo = ({data}: RhemaInfoProps) => {
                     ))}
                 </div>
             </div>
+
         </div>
     );
 };

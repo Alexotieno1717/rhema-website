@@ -26,4 +26,6 @@ const Speakers = ({data}: SpeakersProps) => {
     );
 };
 
+
+
 export default Speakers;
