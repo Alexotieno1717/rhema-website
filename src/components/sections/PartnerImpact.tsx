@@ -17,12 +17,12 @@ const PartnerImpact = ({data}: PartnerImpactProps) => {
                     {/* Video Section */}
                     <div className="flex-1 flex items-center justify-center min-h-[400px]">
                         <iframe
-                            src="https://www.instagram.com/reel/DL47_CoI7vr/embed"
+                            src="https://www.youtube.com/embed/z5wGxqB8tJM"
                             width="100%"
                             height="400"
                             allow="autoplay; encrypted-media"
                             allowFullScreen
-                            title="Instagram Reel"
+                            title="YouTube Video"
                             className="rounded-xl border-none w-full h-full"
                         ></iframe>
                     </div>

@@ -208,6 +208,7 @@ const PartnerContent: IPartners ={
             You can give 100, 1000, as God enables you
             `,
             "In kind - You can partner as a co-worker and share skills",
+            
         ],
         payBillImage: "/assets/paybill.png",
     },
