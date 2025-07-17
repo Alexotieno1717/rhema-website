@@ -149,15 +149,21 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                 </Card>
             </div>
 
-            <div className="flex justify-between">
-                <Button variant="outline" onClick={prevStep} className="cursor-pointer">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-1/4 mt-6 justify-center items-center mx-auto">
+                <Button
+                    variant="outline"
+                    onClick={prevStep}
+                    className="cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
+                    size="default"
+                >
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Back
                 </Button>
                 <Button
                     onClick={nextStep}
                     disabled={!partnerType}
-                    className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer"
+                    className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
+                    size="default"
                 >
                     Continue
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -228,15 +234,23 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                     </div>
                 </div>
     
-                <div className="flex justify-between">
-                    <Button variant="outline" onClick={prevStep}>
+
+
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-1/4 mt-6 justify-center items-center mx-auto">
+                    <Button
+                        variant="outline"
+                        onClick={prevStep}
+                        className="cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
+                        size="default"
+                    >
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Back
                     </Button>
                     <Button
                         onClick={nextStep}
                         disabled={!partnerLevel}
-                        className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer"
+                        className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
+                        size="default"
                     >
                         Continue
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -280,11 +294,21 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                 </Card>
             </div>
 
-            <div className="flex justify-between">
-                <Button variant="outline" onClick={prevStep}>
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Back
-                </Button>
+
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-1/4 mt-6 justify-center items-center mx-auto">
+               
+            
+
+                    <Button
+                        variant="outline"
+                        onClick={prevStep}
+                        className="cursor-pointer w-full sm:w-1/2 px-4 py-2 mx-auto"
+                        size="default"
+                    >
+                        <ArrowLeft className="mr-2 h-4 w-4" />
+                        Back
+                    </Button>
+                
                 <Button
                     className="bg-gradient-to-r from-[#8D5B00] to-[#CBA043] cursor-pointer"
                     onClick={() => {
@@ -295,6 +319,10 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                     <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
             </div>
+
+           
+
+
         </div>
     );
 
