@@ -69,7 +69,12 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                             ? 'border-blue-500 bg-blue-50 shadow-lg'
                             : 'border-gray-200 hover:border-blue-300'
                     }`}
-                    onClick={() => setPartnerType('individual')}
+                    onClick={() => {
+                        if (partnerType !== 'individual') {
+                            setPartnerType('individual');
+                            nextStep();
+                        }
+                    }}
                 >
                     <CardHeader className="text-center pb-4">
                         <User className="h-16 w-16 text-blue-600 mx-auto mb-4" />
@@ -94,7 +99,12 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                             ? 'border-purple-500 bg-purple-50 shadow-lg'
                             : 'border-gray-200 hover:border-purple-300'
                     }`}
-                    onClick={() => setPartnerType('corporate')}
+                    onClick={() => {
+                        if (partnerType !== 'corporate') {
+                            setPartnerType('corporate');
+                            nextStep();
+                        }
+                    }}
                 >
                     <CardHeader className="text-center pb-4">
                         <Users className="h-16 w-16 text-purple-600 mx-auto mb-4" />
@@ -153,7 +163,12 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                                         ? 'border-gray-500 bg-gray-50 shadow-lg'
                                         : 'border-gray-200 hover:border-gray-400'
                                 }`}
-                                onClick={() => setPartnerLevel(item.slug)}
+                                onClick={() => {
+                                    if (partnerLevel !== item.slug) {
+                                        setPartnerLevel(item.slug);
+                                        nextStep();
+                                    }
+                                }}
                                 key={i}
                             >
                                 <h1>{item.slug}</h1>
