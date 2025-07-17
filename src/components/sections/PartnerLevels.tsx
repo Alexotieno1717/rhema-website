@@ -81,7 +81,7 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                     <CardContent>
                         <ul className="space-y-2 text-center text-sm text-gray-600">
                             <li> Personal partnership agreement</li>
-                            <li>Individual support and resources</li>
+                            <li> Individual support and resources</li>
                             <li> Flexible terms and conditions</li>
                             <li> Direct communication channels</li>
                         </ul>
@@ -145,7 +145,7 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
     
                 <div className=''>
                     {/* Render levels based on partner type */}
-                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                         {levelsData.map((item, i) => (
                             <Card
                                 className={`cursor-pointer transition-all duration-200 hover:shadow-lg border-2 flex flex-col bg-white shadow-lg py-10 px-8 items-center text-center space-y-4 ${

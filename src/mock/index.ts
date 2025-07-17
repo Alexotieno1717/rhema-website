@@ -218,44 +218,67 @@ const PartnerContent: IPartners ={
             individual: [
               {
                 id: "1",
-                slug: "Individual 1",
+                slug: "Faith Builder",
                 image: "",
                 description: "Individual 1 1.6M ",
                 buttonText: "Get Started"
               },
               {
                 id: "2",
-                slug: "Individual 2",
+                slug: "Hope Carrier",
                 image: "",
                 description: "Individual 2. 7.5M",
                 buttonText: "Get Started"
               },
               {
                 id: "3",
-                slug: "Individual 3",
+                slug: "Light Barrier",
+                image: "",
+                description: "Individual 8.4T.",
+                buttonText: "Get Started"
+              },
+              {
+                id: "4",
+                slug: "Truth Ambassador",
                 image: "",
                 description: "Individual 8.4T.",
                 buttonText: "Get Started"
               }
+
             ],
+
             corporate: [
               {
                 id: "1",
-                slug: "silver",
+                slug: "Diamond",
                 image: "",
                 description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
                 buttonText: "Get Started"
               },
               {
                 id: "2",
-                slug: "gold",
+                slug: "Platinum",
                 image: "",
                 description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
                 buttonText: "Get Started"
               },
               {
                 id: "3",
-                slug: "platinum",
+                slug: "Gold",
+                image: "",
+                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
+                buttonText: "Get Started"
+              },
+              {
+                id: "3",
+                slug: "Silver",
+                image: "",
+                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
+                buttonText: "Get Started"
+              },
+              {
+                id: "3",
+                slug: "Bronze",
                 image: "",
                 description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
                 buttonText: "Get Started"
