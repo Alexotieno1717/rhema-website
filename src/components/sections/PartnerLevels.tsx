@@ -202,18 +202,26 @@ const PartnerLevels = ({data}: PartnersLevelsProps) => {
                             >
                                 {/* Glossy overlay */}
                                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none" style={{background: 'linear-gradient(120deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.10) 60%, rgba(255,255,255,0.05) 100%)', borderRadius: 'inherit'}}></div>
-                                <h1>{item.slug}</h1>
+                                <h1 className="font-extrabold text-xl md:text-2xl text-[#1B3959] mb-2 drop-shadow-sm tracking-wide">
+                                    {item.slug}
+                                    {/* {item.amount && (
+                                        <span className="ml-2 font-bold text-lg text-[#b08d57]">{item.amount}</span>
+                                    )} */}
+                                </h1>
                                 {
                                     Array.isArray(item.description) ? (
-                                        <ul className="text-center text-md text-[#475467] list-disc list-inside">
-                                        {item.description.map((desc: string, idx: number) => (
-                                            <li key={idx}>{desc}</li>
-                                        ))}
+                                        <ul className="flex flex-col items-center gap-2 mt-2 mb-2">
+                                            {item.description.map((desc: string, idx: number) => (
+                                                <li key={idx} className="flex items-start w-full max-w-xs text-left text-md text-[#475467] relative pl-6">
+                                                    <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#b08d57] mt-0.5"></span>
+                                                    {desc}
+                                                </li>
+                                            ))}
                                         </ul>
-                                        ) : (
-                                            <p className='text-center text-md text-[#475467]'>{item.description}</p>
-                                        )
-                                    }
+                                    ) : (
+                                        <p className='text-center text-md text-[#475467]'>{item.description}</p>
+                                    )
+                                }
                                 {/* Add other content dynamically if needed */}
                             </Card>
                         ))}

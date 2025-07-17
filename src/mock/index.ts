@@ -253,35 +253,35 @@ const PartnerContent: IPartners ={
                 id: "1",
                 slug: "Diamond",
                 image: "",
-                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
+                description: ["Co-Branding Opportunity", "Premium Stage Presence", "Business Forum Privileges", "VIP Benefits", "Verbal Mentions/Media Recognition", "Activation Zone", "Logo Placement"],
                 buttonText: "Get Started"
               },
               {
                 id: "2",
                 slug: "Platinum",
                 image: "",
-                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
+                description: ["LED screen logo visibility duringtransitions", "Panel slot at Business forum", "Premium activation booth sapace", "10 VIP passes", "Brand featuredin all materials", "Verbal mentions and acknowledgement in offcial program", "Logoon RhemaFeast2025 printed and digital event materials"],
                 buttonText: "Get Started"
               },
               {
                 id: "3",
                 slug: "Gold",
                 image: "",
-                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
+                description: ["Business Forum speaker slot", "Logo visibility during transitions", "Exhibitor zone booth", "5 VIP passes", "Media inclusion in recap video", "Speaking Opportunity at Business Forum (select session)", "Logo on Rhema Feast 2025 printed and digital event materials"],
                 buttonText: "Get Started"
               },
               {
                 id: "3",
                 slug: "Silver",
                 image: "",
-                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
+                description: ["Business Forum speaking opportunity", "Exhibition booth", "Program announcements mention", "3 VIP passes", "Logo in select digital platforms"],
                 buttonText: "Get Started"
               },
               {
                 id: "3",
                 slug: "Bronze",
                 image: "",
-                description: "Monthly gift of $40 qualifies for Aaron’s Army Partner.",
+                description: ["Digital branding on select screens", "Verbal acknowledgment during event", "2 VIP invites", "Logo on event materials"],
                 buttonText: "Get Started"
               }
             ]
