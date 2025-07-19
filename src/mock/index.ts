@@ -352,10 +352,10 @@ const ContactContent: IContact = {
     description: "We’d love to hear from you. Please fill out this form.",
     image: "/assets/contact.png",
     socialMedia: [
-        {icons: "/assets/facebook.png", linksText: "#"},
-        {icons: "/assets/instagram.png", linksText: "#"},
-        {icons: "/assets/twitter.png", linksText: "#"},
-        {icons: "/assets/youtube-icon.png", linksText: "#"},
+        {icons: "/assets/facebook.png", linksText: "https://www.facebook.com/juliankyula"},
+        {icons: "/assets/instagram.png", linksText: "https://www.instagram.com/jkyula"},
+        // {icons: "/assets/twitter.png", linksText: "https://twitter.com"},
+        {icons: "/assets/youtube-icon.png", linksText: "https://www.youtube.com/@ruachassemblies"},
     ]
 }
 
