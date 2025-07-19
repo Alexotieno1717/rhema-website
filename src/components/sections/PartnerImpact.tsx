@@ -11,20 +11,20 @@ const PartnerImpact = ({data}: PartnerImpactProps) => {
                 <div className="flex flex-col lg:flex-row items-stretch justify-center gap-8 mt-8 w-full">
                     {/* Text Content */}
                     <div className="flex-1 flex flex-col justify-center bg-white p-6 rounded-xl shadow-sm min-h-[400px]">
-                        <h1 className='text-5xl font-black text-[#1B3959]'>{data.impact.title}</h1>
+                <h1 className='text-5xl font-black text-[#1B3959]'>{data.impact.title}</h1>
                         <p className='text-lg font-medium mt-4'>{data.impact.description}</p>
                     </div>
-                    {/* Video Section */}
+                                {/* Video Section */}
                     <div className="flex-1 flex items-center justify-center min-h-[400px]">
-                        <iframe
+                    <iframe
                             src="https://www.youtube.com/embed/z5wGxqB8tJM"
                             width="100%"
                             height="400"
-                            allow="autoplay; encrypted-media"
-                            allowFullScreen
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
                             title="YouTube Video"
                             className="rounded-xl border-none w-full h-full"
-                        ></iframe>
+                    ></iframe>
                     </div>
                 </div>
 

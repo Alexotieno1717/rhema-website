@@ -5,7 +5,7 @@ import Speakers from "@/components/rhema/Speakers";
 // import LatestNews from "@/components/rhema/LatestNews";
 import Footer from "@/components/ui/Footer";
 import RhemaInfo from "@/components/rhema/RhemaInfo";
-import VideoPlayer from '@/components/rhema/VideoPlayer';
+// import VideoPlayer from '@/components/rhema/VideoPlayer';
 // import {LatestNewsContent, RhemaFeastContent} from "@/mock";
 import {RhemaFeastContent} from "@/mock";
 import RhemaBannerSection from "@/components/rhema/RhemaBannerSection";
@@ -22,7 +22,7 @@ const Page = () => {
 
 
 
-            <VideoPlayer url="https://www.youtube.com/embed/A8EMETMGJjk" title="" />
+            {/* <VideoPlayer url="https://www.youtube.com/embed/A8EMETMGJjk" title="" /> */}
             {/* <div className="px-6 pt-12 lg:px-[102px] lg:pt-28"> */}
                 {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full"> */}
                     {/* Left side - ruach image full height */}

@@ -1,6 +1,7 @@
 import React from 'react';
 import {IRhema} from "@/types";
-import CountDown from "@/components/sections/CountDown";
+import CountdownWithVideo from "@/components/rhema/CountdownWithVideo";
+
 
 
 interface RhemaInfoProps {
@@ -22,9 +23,12 @@ const RhemaInfo = ({data}: RhemaInfoProps) => {
                         </p>
                     </div>
 
-                    {/* Right: Countdown */}
-                    <CountDown endDate="2025-09-01T00:00:00" />
-                    
+                    {/* CountdownWithVideo: Contains both the video player and countdown components */}
+                    <CountdownWithVideo
+                      endDate="2025-09-01T00:00:00"
+                      videoUrl="https://www.youtube.com/embed/A8EMETMGJjk"
+                    />
+
 
                 </div>
 
