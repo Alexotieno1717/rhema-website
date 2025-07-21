@@ -265,7 +265,7 @@ const PartnerContent: IPartners ={
                 id: "2",
                 slug: "Platinum",
                 image: "",
-                description: ["LED screen logo visibility duringtransitions", "Panel slot at Business forum", "Premium activation booth sapace", "10 VIP passes", "Brand featuredin all materials", "Verbal mentions and acknowledgement in offcial program", "Logoon RhemaFeast2025 printed and digital event materials"],
+                description: ["LED screen logo visibility duringtransitions", "Panel slot at Business forum", "Premium activation booth space", "10 VIP passes", "Brand featuredin all materials", "Verbal mentions and acknowledgement in offcial program", "Logoon RhemaFeast2025 printed and digital event materials"],
                 buttonText: "Get Started",
                 amount: "KES 10M+"
               },

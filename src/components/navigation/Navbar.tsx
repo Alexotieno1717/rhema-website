@@ -24,7 +24,7 @@ const socialLinks = [
     { href: "https://www.facebook.com/juliankyula", icon: <FacebookIcon className="w-7 h-7" /> },
     { href: "https://www.instagram.com/jkyula", icon: <InstagramIcon className="w-7 h-7" /> },
     // { href: "https://twitter.com", icon: <TwitterIcon className="w-7 h-7" /> },
-    { href: "https://youtube.com", icon: <YoutubeIcon className="w-7 h-7" /> },
+    { href: "https://www.youtube.com/@ruachassemblies", icon: <YoutubeIcon className="w-7 h-7" /> },
 ];
 
 const Navbar = ({ colors = defaultValues }: HeaderProps) => {
