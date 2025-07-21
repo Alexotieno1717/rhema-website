@@ -35,8 +35,8 @@ export interface SpouseData {
     spousePhone: string;
 }
 
-// const baseUrl = 'https://jkm-backend-main-xbnyr9.laravel.cloud';
-const baseUrl = 'http://jkm-backend.test';
+const baseUrl = 'https://jkm-backend-main-xbnyr9.laravel.cloud';
+// const baseUrl = 'http://jkm-backend.test';
 
 
 const getAllBands = async () => {
@@ -51,7 +51,7 @@ const getAllBands = async () => {
             response = await fetch(url);
         } catch (sslError) {
             console.warn('⚠️ HTTPS failed (SSL certificate issue), trying HTTP...', sslError);
-            url = `${baseUrl}/api/bands`;
+            url = url.replace('https://', 'http://');
             response = await fetch(url);
         }
         

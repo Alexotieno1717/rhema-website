@@ -12,8 +12,8 @@ export async function POST(req: Request) {
             spouse_first_name, spouse_last_name, spouse_email, spouse_phone, type, band_id
         } = body;
 
-        // Use the same backend URL as the bands API for consistency
-        const backendUrl = 'http://jkm-backend.test/api/partners';
+        // Use the production backend URL
+        const backendUrl = 'https://jkm-backend-main-xbnyr9.laravel.cloud/api/partners';
         console.log('🌐 Sending request to:', backendUrl);
 
         const requestParams = {
@@ -37,10 +37,25 @@ export async function POST(req: Request) {
 
         console.log('📋 Request parameters:', requestParams);
 
-        const response = await axios.post(backendUrl, null, {
-            params: requestParams,
-            timeout: 10000, // 10 second timeout
-        });
+        let response;
+        try {
+            // Try HTTPS first
+            response = await axios.post(backendUrl, null, {
+                params: requestParams,
+                timeout: 10000, // 10 second timeout
+            });
+        } catch (httpsError: unknown) {
+            console.warn('⚠️ HTTPS request failed, trying HTTP...', httpsError);
+            
+            // If HTTPS fails due to SSL, try HTTP
+            const httpUrl = backendUrl.replace('https://', 'http://');
+            console.log('🔄 Retrying with HTTP:', httpUrl);
+            
+            response = await axios.post(httpUrl, null, {
+                params: requestParams,
+                timeout: 10000,
+            });
+        }
 
         console.log('✅ Backend response received:', {
             status: response.status,
