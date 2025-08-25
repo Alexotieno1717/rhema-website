@@ -184,18 +184,18 @@ const PartnerContent: IPartners ={
         data: [
             {
                 id: "1",
-                title: "650,000 +",
-                description: "Provided meals and supplied more than 500 tons of relief items to Kenya",
+                title: "1,500 +",
+                description: "House Hold Suport have been suported with food,clothing, rent, sanitary supplies etc.",
             },
             {
                 id: "2",
-                title: "14 Wells",
-                description: "Built 14 wells and a 10-mile pipeline, increasing access to clean water in Kenya",
+                title: "2,200 +",
+                description: "Football engagementa have gone through the HOPE Football Tournaments organized by RUACH Assembly",
             },
             {
                 id: "3",
-                title: "35,000",
-                description: "Served over 35,000 ex-offenders in 18 years, boasting a recidivism rate of only 16%",
+                title: "4,000 +",
+                description: "Have been empowered via Business Monday and the Faith Driven Entrepreneurship Program",
             }
         ]
     },
@@ -396,9 +396,11 @@ const RhemaFeastContent: IRhema = {
         The pillars of Rhema Feast are Word, Worship, Prayer, and Unified Fellowship. Since its inception, Rhema Feast has expanded regionally and internationally, witnessing powerful spiritual movements and a rising hunger for God and mentorship among people Rhema Feast has been successful in ministering to from all over the world.
         `,
         data: [
-            {title: "50,000+", description: "lives impacted"},
-            {title: "12", description: "nations"},
-            {title: "10,000+", description: "Empowering faith-driven entrepreneurs"},
+            {title: "5,000+", description: "women empowered"},
+            {title: "20,000+", description: "Youth reached"},
+            {title: "10,000+", description: "Skills Beneficiaries"},
+            {title: "2,000+", description: "Employment Opportunities"},
+           
         ],
     },
     speakers: {

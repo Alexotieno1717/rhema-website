@@ -26,7 +26,8 @@ const RhemaInfo = ({data}: RhemaInfoProps) => {
                     {/* CountdownWithVideo: Contains both the video player and countdown components */}
                     <CountdownWithVideo
                       endDate="2025-09-01T00:00:00"
-                      videoUrl="https://www.youtube.com/embed/A8EMETMGJjk"
+                      videoUrl="https://www.youtube.com/embed/Z-IPIPJcL9k"
+                    // videoUrl="https://www.youtube.com/embed/A8EMETMGJjk
                     />
 
 
@@ -38,7 +39,8 @@ const RhemaInfo = ({data}: RhemaInfoProps) => {
             <div className="px-6 lg:px-26 pt-12 flex flex-col lg:flex-row gap-6 lg:gap-0">
                 {/* Poster Image */}
                 <div className="w-full lg:w-[50%]">
-                    <img src="/assets/rhema_feast_2025_recent.jpeg" alt="rhema" className="w-full object-cover" />
+                {/* <img src="/assets/rhema_feast_2025_recent.jpeg" alt="rhema" className="w-full object-cover" /> */}
+                <img src="/assets/rhemaFeast_poster.jpeg" alt="rhema" className="w-full object-cover" />
                 </div>
 
                 {/* Stats Box */}
